@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Amul Heritage Digital Initiative — Digital preservation of UNESCO Silk Road heritage sites along the Zarafshan-Karakum Corridor through photogrammetry, AI reconstruction, and VR/AR technologies."/>
+<meta name="keywords" content="digital heritage, Silk Road, photogrammetry, Turkmenistan, Zarafshan-Karakum, UNESCO, 3D reconstruction, AI, Seyitjemaleddin, Ancient Nisa, Merv"/>
+<meta property="og:title" content="Amul Heritage Digital Initiative"/>
+<meta property="og:description" content="Preserving the Legacy of the Great Silk Road Through Digital Technologies"/>
+<meta property="og:type" content="website"/>
+<title>Amul Heritage Digital Initiative | Digital Preservation of Silk Road Heritage</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+/* ═══════════════════════════════════════════════
+   DESIGN TOKENS
+═══════════════════════════════════════════════ */
+:root {
+  --navy:        #1e3a5f;
+  --navy-deep:   #122540;
+  --navy-mid:    #2a4f7c;
+  --gold:        #c9a961;
+  --gold-light:  #e2c98a;
+  --gold-pale:   #f5ecd4;
+  --terra:       #b85450;
+  --terra-light: #d4706c;
+  --white:       #ffffff;
+  --off-white:   #f8f6f1;
+  --gray-light:  #edeae3;
+  --gray-mid:    #9a9488;
+  --gray-dark:   #4a4640;
+  --ink:         #1c1a17;
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body:    'Montserrat', 'Helvetica Neue', sans-serif;
+
+  --shadow-sm:  0 1px 4px rgba(30,58,95,0.08);
+  --shadow-md:  0 4px 20px rgba(30,58,95,0.12);
+  --shadow-lg:  0 12px 48px rgba(30,58,95,0.16);
+  --radius:     6px;
+  --radius-lg:  12px;
+  --transition: 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ═══════════════════════════════════════════════
+   RESET & BASE
+═══════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;font-size:16px;}
+body{
+  font-family:var(--font-body);
+  background:var(--white);
+  color:var(--ink);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{color:var(--navy);text-decoration:none;transition:color var(--transition);}
+a:hover{color:var(--terra);}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+/* ═══════════════════════════════════════════════
+   UTILITY
+═══════════════════════════════════════════════ */
+.container{max-width:1160px;margin:0 auto;padding:0 2rem;}
+.section-tag{
+  display:inline-block;
+  font-family:var(--font-body);
+  font-size:0.65rem;font-weight:700;
+  letter-spacing:0.28em;text-transform:uppercase;
+  color:var(--terra);
+  border-bottom:1px solid currentColor;
+  padding-bottom:0.2em;
+  margin-bottom:1rem;
+}
+h2.section-title{
+  font-family:var(--font-display);
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:600;
+  color:var(--navy-deep);
+  line-height:1.2;
+  margin-bottom:1rem;
+}
+.section-lead{
+  font-size:1.05rem;
+  color:var(--gray-dark);
+  max-width:680px;
+  line-height:1.8;
+}
+
+/* Geometric pattern overlay (Turkmen/Islamic-inspired) */
+.geo-pattern{
+  position:absolute;
+  pointer-events:none;
+  opacity:0.06;
+}
+
+/* ═══════════════════════════════════════════════
+   NAV
+═══════════════════════════════════════════════ */
+#nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  background:rgba(18,37,64,0.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(201,169,97,0.2);
+  padding:0 2rem;
+  height:64px;
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background var(--transition);
+}
+.nav-logo{
+  display:flex;align-items:center;gap:0.75rem;
+  font-family:var(--font-display);
+  font-size:1.15rem;font-weight:600;
+  color:var(--gold-light);
+  letter-spacing:0.02em;
+}
+.nav-logo-mark{
+  width:32px;height:32px;
+  border:1.5px solid var(--gold);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:0.8rem;color:var(--gold);
+  flex-shrink:0;
+}
+.nav-links{
+  display:flex;gap:2rem;list-style:none;
+  font-size:0.7rem;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;
+}
+.nav-links a{color:rgba(255,255,255,0.65);transition:color var(--transition);}
+.nav-links a:hover{color:var(--gold-light);}
+.nav-cta{
+  font-size:0.68rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;
+  padding:0.55em 1.4em;
+  border:1.5px solid var(--gold);
+  color:var(--gold);border-radius:var(--radius);
+  transition:background var(--transition),color var(--transition);
+}
+.nav-cta:hover{background:var(--gold);color:var(--navy-deep);}
+@media(max-width:860px){.nav-links{display:none;}}
+
+/* ═══════════════════════════════════════════════
+   HERO
+═══════════════════════════════════════════════ */
+#hero{
+  min-height:100vh;
+  background:var(--navy-deep);
+  display:flex;align-items:center;
+  position:relative;overflow:hidden;
+  padding:8rem 0 6rem;
+}
+
+/* Desert landscape gradient */
+.hero-sky{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 100% 60% at 50% 0%,  rgba(30,58,95,0.0) 0%,  transparent 70%),
+    radial-gradient(ellipse 80%  80% at 80% 50%,  rgba(201,169,97,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60%  40% at 20% 70%,  rgba(184,84,80,0.10)  0%, transparent 50%),
+    linear-gradient(175deg, #0d1e35 0%, #1e3a5f 40%, #152d4a 70%, #0a1828 100%);
+}
+/* Stylised dune horizon */
+.hero-dunes{
+  position:absolute;bottom:0;left:0;right:0;
+  height:35%;
+  background:linear-gradient(0deg,rgba(201,169,97,0.08) 0%,transparent 100%);
+}
+/* Stars */
+.hero-stars{position:absolute;inset:0;overflow:hidden;}
+.star{
+  position:absolute;background:white;border-radius:50%;
+  animation:twinkle 3s ease-in-out infinite;
+}
+@keyframes twinkle{0%,100%{opacity:.2}50%{opacity:.9}}
+
+/* Geometric SVG wireframe arch */
+.hero-arch-wrap{
+  position:absolute;right:6%;top:50%;transform:translateY(-50%);
+  width:min(520px,45vw);opacity:0.12;
+}
+
+.hero-content{position:relative;z-index:2;max-width:700px;}
+.hero-eyebrow{
+  font-size:0.68rem;font-weight:700;letter-spacing:0.32em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:0.8rem;
+}
+.hero-eyebrow::before{content:'';display:block;width:36px;height:1px;background:var(--gold);}
+h1.hero-title{
+  font-family:var(--font-display);
+  font-size:clamp(2.8rem,7vw,5.5rem);
+  font-weight:300;
+  color:var(--white);
+  line-height:1.08;
+  letter-spacing:-0.01em;
+  margin-bottom:0.5rem;
+}
+h1.hero-title strong{font-weight:700;color:var(--gold-light);}
+.hero-subtitle{
+  font-family:var(--font-display);
+  font-size:clamp(1rem,2.2vw,1.35rem);
+  font-weight:300;font-style:italic;
+  color:rgba(255,255,255,0.7);
+  margin-bottom:2.5rem;
+  line-height:1.5;
+  max-width:580px;
+}
+.hero-desc{
+  font-size:0.92rem;
+  color:rgba(255,255,255,0.55);
+  margin-bottom:3rem;
+  max-width:520px;
+  line-height:1.85;
+}
+.hero-btns{display:flex;flex-wrap:wrap;gap:1rem;}
+.btn-primary{
+  font-family:var(--font-body);
+  font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;
+  padding:1em 2.4em;
+  background:var(--gold);
+  color:var(--navy-deep);
+  border-radius:var(--radius);
+  border:none;cursor:pointer;
+  transition:background var(--transition),transform var(--transition),box-shadow var(--transition);
+  box-shadow:0 4px 20px rgba(201,169,97,0.35);
+}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,169,97,0.45);}
+.btn-outline{
+  font-family:var(--font-body);
+  font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;
+  padding:1em 2.4em;
+  background:transparent;
+  color:rgba(255,255,255,0.8);
+  border:1.5px solid rgba(255,255,255,0.3);
+  border-radius:var(--radius);cursor:pointer;
+  transition:border-color var(--transition),color var(--transition);
+}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+.hero-stats{
+  display:flex;flex-wrap:wrap;gap:2.5rem;
+  margin-top:3.5rem;
+  padding-top:2.5rem;
+  border-top:1px solid rgba(255,255,255,0.1);
+}
+.hero-stat-num{
+  font-family:var(--font-display);
+  font-size:2.2rem;font-weight:700;
+  color:var(--gold);line-height:1;
+  margin-bottom:0.2rem;
+}
+.hero-stat-label{
+  font-size:0.68rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  color:rgba(255,255,255,0.45);
+}
+
+/* scroll indicator */
+.scroll-indicator{
+  position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:0.5rem;
+  font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.3);
+  animation:bob 2.4s ease-in-out infinite;
+}
+.scroll-arrow{width:20px;height:20px;border-right:1.5px solid rgba(255,255,255,0.25);border-bottom:1.5px solid rgba(255,255,255,0.25);transform:rotate(45deg);}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+/* ═══════════════════════════════════════════════
+   ABOUT
+═══════════════════════════════════════════════ */
+#about{
+  padding:7rem 0;
+  background:var(--off-white);
+  position:relative;overflow:hidden;
+}
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;
+}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:3rem;}}
+.about-text p{font-size:0.97rem;color:var(--gray-dark);line-height:1.9;margin-bottom:1.2rem;}
+.stat-row{
+  display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:2.5rem;
+}
+.stat-box{
+  flex:1;min-width:120px;
+  background:var(--white);
+  border:1px solid var(--gray-light);
+  border-top:3px solid var(--gold);
+  padding:1.5rem 1.25rem;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-sm);
+}
+.stat-box-num{
+  font-family:var(--font-display);
+  font-size:2rem;font-weight:700;
+  color:var(--navy);margin-bottom:0.3rem;
+}
+.stat-box-label{
+  font-size:0.72rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+  color:var(--gray-mid);
+}
+
+/* Timeline */
+.timeline{position:relative;padding-left:1.8rem;}
+.timeline::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;
+  width:2px;background:linear-gradient(180deg,var(--gold),var(--terra),var(--navy-mid));
+}
+.tl-entry{position:relative;margin-bottom:2rem;}
+.tl-dot{
+  position:absolute;left:-2.25rem;top:0.35rem;
+  width:13px;height:13px;border-radius:50%;
+  background:var(--white);border:2.5px solid var(--gold);
+  box-shadow:0 0 0 4px rgba(201,169,97,0.15);
+}
+.tl-year{
+  font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:0.15rem;
+}
+.tl-event{font-size:0.88rem;font-weight:600;color:var(--navy-deep);margin-bottom:0.1rem;}
+.tl-detail{font-size:0.8rem;color:var(--gray-mid);}
+
+/* ═══════════════════════════════════════════════
+   METHODOLOGY
+═══════════════════════════════════════════════ */
+#methodology{
+  padding:7rem 0;
+  background:var(--navy-deep);
+  position:relative;overflow:hidden;
+}
+#methodology .section-tag{color:var(--gold);}
+#methodology h2.section-title{color:var(--white);}
+#methodology .section-lead{color:rgba(255,255,255,0.55);}
+.method-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
+  margin-top:3.5rem;
+}
+@media(max-width:800px){.method-grid{grid-template-columns:1fr;}}
+.method-card{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-top:3px solid var(--gold);
+  padding:2.5rem 2rem;
+  border-radius:var(--radius-lg);
+  transition:background var(--transition),transform var(--transition),box-shadow var(--transition);
+  position:relative;overflow:hidden;
+}
+.method-card:hover{
+  background:rgba(255,255,255,0.07);
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(0,0,0,0.3);
+}
+.method-card:nth-child(2){border-top-color:var(--terra);}
+.method-card:nth-child(3){border-top-color:var(--navy-mid);}
+.method-icon{
+  width:52px;height:52px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.5rem;
+  font-size:1.5rem;
+}
+.method-card:nth-child(1) .method-icon{background:rgba(201,169,97,0.15);}
+.method-card:nth-child(2) .method-icon{background:rgba(184,84,80,0.15);}
+.method-card:nth-child(3) .method-icon{background:rgba(42,79,124,0.25);}
+.method-title{
+  font-family:var(--font-display);
+  font-size:1.4rem;font-weight:600;
+  color:var(--white);margin-bottom:0.75rem;
+}
+.method-desc{font-size:0.87rem;color:rgba(255,255,255,0.55);line-height:1.85;}
+.method-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:1.5rem;}
+.method-tag{
+  font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  padding:0.25em 0.65em;
+  border-radius:3px;
+  background:rgba(255,255,255,0.07);
+  color:rgba(255,255,255,0.45);
+}
+
+/* ═══════════════════════════════════════════════
+   PROJECTS
+═══════════════════════════════════════════════ */
+#projects{
+  padding:7rem 0;
+  background:var(--white);
+}
+.projects-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
+  margin-top:3.5rem;
+}
+@media(max-width:900px){.projects-grid{grid-template-columns:1fr;}}
+.project-card{
+  border:1px solid var(--gray-light);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+  transition:transform var(--transition),box-shadow var(--transition);
+  display:flex;flex-direction:column;
+}
+.project-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg);}
+.project-header{
+  height:180px;
+  position:relative;
+  display:flex;align-items:flex-end;
+  padding:1.5rem;
+  overflow:hidden;
+}
+.project-card:nth-child(1) .project-header{
+  background:linear-gradient(135deg,#1e3a5f 0%,#2a4f7c 100%);
+}
+.project-card:nth-child(2) .project-header{
+  background:linear-gradient(135deg,#2d1f0e 0%,#5c3d1e 100%);
+}
+.project-card:nth-child(3) .project-header{
+  background:linear-gradient(135deg,#1e2f1a 0%,#3a5c30 100%);
+}
+.project-header-pattern{
+  position:absolute;inset:0;opacity:0.12;
+}
+.project-icon{
+  position:absolute;top:1.25rem;right:1.25rem;
+  font-size:2.2rem;opacity:0.35;
+}
+.project-status{
+  position:relative;z-index:1;
+  font-size:0.62rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+  padding:0.3em 0.75em;
+  border-radius:3px;
+  background:rgba(255,255,255,0.18);
+  color:rgba(255,255,255,0.9);
+  border:1px solid rgba(255,255,255,0.25);
+}
+.project-body{padding:1.75rem;flex:1;display:flex;flex-direction:column;}
+.project-era{
+  font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--terra);margin-bottom:0.4rem;
+}
+.project-name{
+  font-family:var(--font-display);
+  font-size:1.35rem;font-weight:600;
+  color:var(--navy-deep);margin-bottom:0.75rem;line-height:1.25;
+}
+.project-desc{font-size:0.84rem;color:var(--gray-dark);line-height:1.8;flex:1;}
+.project-features{list-style:none;margin-top:1.25rem;display:flex;flex-direction:column;gap:0.45rem;}
+.project-features li{
+  font-size:0.8rem;color:var(--gray-mid);
+  padding-left:1.1rem;position:relative;
+}
+.project-features li::before{
+  content:'◆';position:absolute;left:0;
+  font-size:0.45rem;color:var(--gold);top:0.3em;
+}
+
+/* ═══════════════════════════════════════════════
+   TEAM
+═══════════════════════════════════════════════ */
+#team{
+  padding:7rem 0;
+  background:var(--off-white);
+}
+.team-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;
+  margin-top:3.5rem;
+}
+@media(max-width:860px){.team-grid{grid-template-columns:1fr;}}
+.team-card{
+  background:var(--white);
+  border:1px solid var(--gray-light);
+  border-radius:var(--radius-lg);
+  padding:2.25rem 2rem;
+  box-shadow:var(--shadow-sm);
+  transition:box-shadow var(--transition),transform var(--transition);
+}
+.team-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-4px);}
+.team-avatar{
+  width:64px;height:64px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-size:1.4rem;font-weight:700;
+  color:var(--white);margin-bottom:1.25rem;
+  flex-shrink:0;
+}
+.team-card:nth-child(1) .team-avatar{background:linear-gradient(135deg,var(--navy),var(--navy-mid));}
+.team-card:nth-child(2) .team-avatar{background:linear-gradient(135deg,var(--terra),#d4706c);}
+.team-card:nth-child(3) .team-avatar{background:linear-gradient(135deg,#2d5016,#4a8025);}
+.team-name{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--navy-deep);margin-bottom:0.2rem;}
+.team-role{
+  font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--terra);margin-bottom:0.75rem;
+}
+.team-affil{
+  font-size:0.8rem;font-weight:500;color:var(--navy-mid);
+  margin-bottom:1rem;
+  padding-bottom:1rem;
+  border-bottom:1px solid var(--gray-light);
+  line-height:1.5;
+}
+.team-focus-label{
+  font-size:0.62rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gray-mid);margin-bottom:0.4rem;
+}
+.team-focus{font-size:0.83rem;color:var(--gray-dark);line-height:1.7;}
+.team-bg{font-size:0.82rem;color:var(--gray-mid);margin-top:0.75rem;line-height:1.6;font-style:italic;}
+
+/* ═══════════════════════════════════════════════
+   PUBLICATIONS
+═══════════════════════════════════════════════ */
+#publications{
+  padding:7rem 0;
+  background:var(--white);
+}
+.pub-list{margin-top:3rem;display:flex;flex-direction:column;gap:1.5rem;}
+.pub-card{
+  border:1px solid var(--gray-light);
+  border-left:4px solid var(--navy);
+  border-radius:0 var(--radius-lg) var(--radius-lg) 0;
+  padding:1.75rem 2rem;
+  background:var(--white);
+  box-shadow:var(--shadow-sm);
+  transition:box-shadow var(--transition),border-left-color var(--transition);
+  display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start;
+}
+.pub-card:hover{box-shadow:var(--shadow-md);border-left-color:var(--gold);}
+@media(max-width:640px){.pub-card{grid-template-columns:1fr;}}
+.pub-year{
+  font-size:0.62rem;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--terra);margin-bottom:0.4rem;
+}
+.pub-title{
+  font-family:var(--font-display);
+  font-size:1.05rem;font-weight:600;
+  color:var(--navy-deep);margin-bottom:0.25rem;line-height:1.4;
+}
+.pub-title-ru{
+  font-size:0.85rem;font-style:italic;
+  color:var(--gray-mid);margin-bottom:0.6rem;line-height:1.4;
+}
+.pub-meta{font-size:0.78rem;color:var(--gray-mid);line-height:1.7;}
+.pub-meta strong{color:var(--gray-dark);}
+.pub-tags{display:flex;flex-wrap:wrap;gap:0.35rem;margin-top:0.75rem;}
+.pub-tag{
+  font-size:0.58rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  padding:0.25em 0.65em;border-radius:3px;
+  background:var(--gold-pale);color:var(--navy-mid);
+}
+.pub-link{
+  display:inline-flex;align-items:center;gap:0.4rem;
+  font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--navy);
+  padding:0.6em 1.2em;
+  border:1.5px solid var(--gray-light);
+  border-radius:var(--radius);
+  white-space:nowrap;
+  align-self:flex-start;
+  transition:border-color var(--transition),color var(--transition),background var(--transition);
+}
+.pub-link:hover{border-color:var(--navy);background:var(--navy);color:var(--white);}
+
+/* ═══════════════════════════════════════════════
+   PARTNERS
+═══════════════════════════════════════════════ */
+#partners{
+  padding:5rem 0;
+  background:var(--off-white);
+  border-top:1px solid var(--gray-light);
+  border-bottom:1px solid var(--gray-light);
+}
+.partners-intro{
+  text-align:center;
+  font-size:0.7rem;font-weight:700;letter-spacing:0.25em;text-transform:uppercase;
+  color:var(--gray-mid);margin-bottom:2.5rem;
+}
+.partners-row{
+  display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;align-items:stretch;
+}
+.partner-item{
+  background:var(--white);
+  border:1px solid var(--gray-light);
+  border-radius:var(--radius-lg);
+  padding:2rem 2.5rem;
+  display:flex;flex-direction:column;
+  align-items:center;text-align:center;
+  gap:0.75rem;
+  flex:1;min-width:220px;max-width:320px;
+  box-shadow:var(--shadow-sm);
+  transition:box-shadow var(--transition),transform var(--transition);
+}
+.partner-item:hover{box-shadow:var(--shadow-md);transform:translateY(-3px);}
+.partner-flag{font-size:2rem;}
+.partner-name{
+  font-family:var(--font-display);
+  font-size:0.95rem;font-weight:600;
+  color:var(--navy-deep);line-height:1.35;
+}
+.partner-country{
+  font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+  color:var(--gray-mid);
+}
+
+/* ═══════════════════════════════════════════════
+   CONTACT
+═══════════════════════════════════════════════ */
+#contact{
+  padding:7rem 0;
+  background:var(--navy-deep);
+  position:relative;overflow:hidden;
+}
+#contact .section-tag{color:var(--gold);}
+#contact h2.section-title{color:var(--white);}
+.contact-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:5rem;
+  align-items:start;margin-top:3rem;
+}
+@media(max-width:760px){.contact-grid{grid-template-columns:1fr;gap:3rem;}}
+.contact-block p{
+  font-size:0.95rem;color:rgba(255,255,255,0.55);
+  line-height:1.9;margin-bottom:2rem;
+}
+.contact-items{display:flex;flex-direction:column;gap:1.25rem;}
+.contact-item{
+  display:flex;gap:1rem;align-items:flex-start;
+}
+.contact-item-icon{
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(201,169,97,0.12);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1rem;flex-shrink:0;margin-top:0.1rem;
+}
+.contact-item-label{
+  font-size:0.62rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;
+  color:rgba(255,255,255,0.35);margin-bottom:0.2rem;
+}
+.contact-item-value{
+  font-size:0.93rem;color:rgba(255,255,255,0.8);
+}
+.contact-item-value a{color:var(--gold-light);}
+.contact-item-value a:hover{color:var(--gold);}
+.contact-form-box{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.08);
+  border-radius:var(--radius-lg);
+  padding:2.5rem;
+}
+.contact-form-box h3{
+  font-family:var(--font-display);
+  font-size:1.3rem;color:var(--white);margin-bottom:0.5rem;
+}
+.contact-form-box p{
+  font-size:0.85rem;color:rgba(255,255,255,0.45);margin-bottom:1.75rem;line-height:1.7;
+}
+.form-field{margin-bottom:1.25rem;}
+.form-field label{
+  display:block;font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;
+  color:rgba(255,255,255,0.45);margin-bottom:0.4rem;
+}
+.form-field input,.form-field textarea{
+  width:100%;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--radius);
+  padding:0.75rem 1rem;
+  font-family:var(--font-body);font-size:0.88rem;
+  color:rgba(255,255,255,0.8);
+  outline:none;
+  transition:border-color var(--transition);
+}
+.form-field input:focus,.form-field textarea:focus{border-color:var(--gold);}
+.form-field textarea{height:120px;resize:vertical;}
+.form-note{
+  font-size:0.72rem;color:rgba(255,255,255,0.3);
+  margin-top:0.75rem;line-height:1.7;
+}
+
+/* ═══════════════════════════════════════════════
+   FOOTER
+═══════════════════════════════════════════════ */
+footer{
+  background:#0a1828;
+  padding:2.5rem 2rem;
+  display:flex;flex-wrap:wrap;gap:1rem;
+  justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+.footer-brand{
+  font-family:var(--font-display);
+  font-size:1rem;font-weight:600;
+  color:var(--gold-light);
+}
+.footer-tagline{font-size:0.72rem;color:rgba(255,255,255,0.3);margin-top:0.1rem;}
+.footer-links{display:flex;flex-wrap:wrap;gap:1.5rem;}
+.footer-links a{font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.3);transition:color var(--transition);}
+.footer-links a:hover{color:var(--gold);}
+.footer-copy{font-size:0.7rem;color:rgba(255,255,255,0.2);}
+
+/* ═══════════════════════════════════════════════
+   TURKMEN GEOMETRIC DIVIDER
+═══════════════════════════════════════════════ */
+.geo-divider{
+  width:100%;height:24px;
+  background:var(--gold);
+  position:relative;overflow:hidden;
+}
+.geo-divider::after{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    90deg,
+    transparent 0px,
+    transparent 18px,
+    rgba(0,0,0,0.15) 18px,
+    rgba(0,0,0,0.15) 19px
+  );
+}
+
+/* ═══════════════════════════════════════════════
+   SCROLL REVEAL
+═══════════════════════════════════════════════ */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.65s ease,transform 0.65s ease;}
+.reveal.visible{opacity:1;transform:none;}
+.reveal-delay-1{transition-delay:0.12s;}
+.reveal-delay-2{transition-delay:0.24s;}
+.reveal-delay-3{transition-delay:0.36s;}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════ NAV ════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Amul Heritage Digital Initiative home">
+    <div class="nav-logo-mark" aria-hidden="true">A</div>
+    AHDI
+  </a>
+  <ul class="nav-links" role="list">
+    <li><a href="#about">About</a></li>
+    <li><a href="#methodology">Methods</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#projects" class="nav-cta" aria-label="Explore our projects">Explore Projects</a>
+</nav>
+
+<!-- ════════════════════════ HERO ════════════════════════ -->
+<section id="hero" aria-labelledby="hero-heading">
+  <div class="hero-sky" aria-hidden="true"></div>
+  <div class="hero-dunes" aria-hidden="true"></div>
+
+  <!-- Scattered stars -->
+  <div class="hero-stars" aria-hidden="true" id="stars-container"></div>
+
+  <!-- Stylized wireframe arch of a mausoleum -->
+  <div class="hero-arch-wrap" aria-hidden="true">
+    <svg viewBox="0 0 440 580" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Main pointed arch -->
+      <path d="M60 580 L60 280 Q60 80 220 60 Q380 80 380 280 L380 580" stroke="#c9a961" stroke-width="2" fill="none"/>
+      <!-- Inner arch -->
+      <path d="M100 580 L100 295 Q100 130 220 115 Q340 130 340 295 L340 580" stroke="#c9a961" stroke-width="1" fill="none" opacity="0.5"/>
+      <!-- Innermost arch -->
+      <path d="M140 580 L140 310 Q140 185 220 175 Q300 185 300 310 L300 580" stroke="#c9a961" stroke-width="0.8" fill="none" opacity="0.35"/>
+      <!-- Muqarnas / decorative cornice -->
+      <path d="M40 285 L80 285 L80 270 L100 250 L120 270 L140 250 L160 270 L180 250 L200 270 L220 250 L240 270 L260 250 L280 270 L300 250 L320 270 L340 250 L360 270 L360 285 L400 285" stroke="#c9a961" stroke-width="1.2" fill="none" opacity="0.6"/>
+      <!-- Tile grid pattern on surface -->
+      <line x1="60" y1="350" x2="380" y2="350" stroke="#c9a961" stroke-width="0.6" opacity="0.3"/>
+      <line x1="60" y1="420" x2="380" y2="420" stroke="#c9a961" stroke-width="0.6" opacity="0.3"/>
+      <line x1="60" y1="490" x2="380" y2="490" stroke="#c9a961" stroke-width="0.6" opacity="0.3"/>
+      <line x1="130" y1="350" x2="130" y2="580" stroke="#c9a961" stroke-width="0.6" opacity="0.3"/>
+      <line x1="200" y1="250" x2="200" y2="580" stroke="#c9a961" stroke-width="0.6" opacity="0.3"/>
+      <line x1="270" y1="350" x2="270" y2="580" stroke="#c9a961" stroke-width="0.6" opacity="0.3"/>
+      <line x1="310" y1="350" x2="310" y2="580" stroke="#c9a961" stroke-width="0.6" opacity="0.3"/>
+      <!-- Base platform -->
+      <rect x="20" y="568" width="400" height="12" fill="#c9a961" opacity="0.2" rx="2"/>
+      <!-- Dome cap wireframe -->
+      <ellipse cx="220" cy="62" rx="80" ry="35" stroke="#c9a961" stroke-width="1.2" fill="none" opacity="0.5"/>
+      <ellipse cx="220" cy="62" rx="50" ry="22" stroke="#c9a961" stroke-width="0.7" fill="none" opacity="0.3"/>
+      <line x1="220" y1="27" x2="220" y2="97" stroke="#c9a961" stroke-width="0.7" opacity="0.3"/>
+      <line x1="140" y1="62" x2="300" y2="62" stroke="#c9a961" stroke-width="0.7" opacity="0.3"/>
+      <!-- Finial -->
+      <circle cx="220" cy="20" r="5" stroke="#c9a961" stroke-width="1.5" fill="none"/>
+      <line x1="220" y1="15" x2="220" y2="5" stroke="#c9a961" stroke-width="1.5"/>
+      <circle cx="220" cy="4" r="3" fill="#c9a961" opacity="0.6"/>
+    </svg>
+  </div>
+
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Zarafshan-Karakum Corridor · UNESCO World Heritage</div>
+      <h1 class="hero-title" id="hero-heading">
+        <strong>Amul Heritage</strong><br />
+        Digital Initiative
+      </h1>
+      <p class="hero-subtitle">
+        Preserving the Legacy of the Great Silk Road<br />Through Digital Technologies
+      </p>
+      <p class="hero-desc">
+        An international research collaboration combining photogrammetry, AI-powered reconstruction,
+        and immersive VR/AR to create high-fidelity digital twins of Turkmenistan's most significant
+        Silk Road monuments — from the Parthian citadels of Nisa to the azure tilework of Seyitjemaleddin.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">Explore Our Projects</a>
+        <a href="#publications" class="btn-outline">View Publications</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">3+</div>
+          <div class="hero-stat-label">Years of Research</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">3</div>
+          <div class="hero-stat-label">Sites Documented</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">4</div>
+          <div class="hero-stat-label">Peer-Reviewed Works</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">2</div>
+          <div class="hero-stat-label">Countries</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>Scroll</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- Gold divider -->
+<div class="geo-divider" aria-hidden="true"></div>
+
+<!-- ════════════════════════ ABOUT ════════════════════════ -->
+<section id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="section-tag">About the Initiative</p>
+        <h2 class="section-title" id="about-heading">Documenting an Endangered Legacy</h2>
+        <p>
+          The <strong>Amul Heritage Digital Initiative (AHDI)</strong> is an international research collaboration
+          dedicated to documenting and digitally preserving UNESCO World Heritage sites along the
+          Zarafshan-Karakum Corridor — the Turkmenistan section of the ancient Silk Road (Merv–Amul route).
+        </p>
+        <p>
+          We employ cutting-edge photogrammetry, AI-powered 3D reconstruction, and immersive VR technologies
+          to create high-fidelity digital twins of endangered archaeological monuments. These digital records
+          serve as both scientific archives and educational resources for future generations.
+        </p>
+        <p>
+          Our work bridges the disciplines of archaeology, computer science, and cultural heritage preservation,
+          combining Chinese expertise in AI and machine learning with on-the-ground fieldwork expertise
+          in Turkmenistan.
+        </p>
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-box-num">2020–</div>
+            <div class="stat-box-label">Active Since</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-num">3</div>
+            <div class="stat-box-label">Sites Documented</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box-num">CN · TM</div>
+            <div class="stat-box-label">International Team</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-1">
+        <p class="section-tag">Project Timeline</p>
+        <div class="timeline">
+          <div class="tl-entry">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-year">2020</div>
+            <div class="tl-event">Initiative Founded</div>
+            <div class="tl-detail">First documentation project at Magtymguly Turkmen State University museums; artifact digitisation workflow established.</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-year">2021</div>
+            <div class="tl-event">Ancient Nisa Fortress</div>
+            <div class="tl-detail">Comprehensive 3D documentation of the Parthian capital; complex architectural survey completed.</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-year">2023</div>
+            <div class="tl-event">Academic Publications</div>
+            <div class="tl-detail">Three peer-reviewed papers published in CyberLeninka and eLibrary.ru; methodology formalised.</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-year">2024</div>
+            <div class="tl-event">Seyitjemaleddin Mausoleum</div>
+            <div class="tl-detail">High-resolution VR-capable model completed; international conference presentation at Altai State University.</div>
+          </div>
+          <div class="tl-entry">
+            <div class="tl-dot" aria-hidden="true"></div>
+            <div class="tl-year">2025–26</div>
+            <div class="tl-event">Merv Archaeological Complex</div>
+            <div class="tl-detail">Planned documentation of the Merv oasis complex; expanded AI reconstruction pipeline.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ METHODOLOGY ════════════════════════ -->
+<section id="methodology" aria-labelledby="method-heading">
+  <div class="container">
+    <p class="section-tag">Our Approach</p>
+    <h2 class="section-title" id="method-heading">Methodology</h2>
+    <p class="section-lead">
+      We combine three complementary digital technologies to produce comprehensive, reproducible,
+      and publicly accessible records of Silk Road heritage sites.
+    </p>
+
+    <div class="method-grid">
+      <div class="method-card reveal">
+        <div class="method-icon" aria-hidden="true">📐</div>
+        <div class="method-title">Photogrammetry</div>
+        <p class="method-desc">
+          High-precision 3D capture using both professional-grade equipment and accessible mobile applications
+          such as Polycam. Thousands of overlapping photographs are processed through structure-from-motion
+          algorithms to produce dense point clouds and textured meshes at millimetre accuracy.
+          Field documentation is conducted in situ with minimal site disturbance.
+        </p>
+        <div class="method-tags">
+          <span class="method-tag">Structure-from-Motion</span>
+          <span class="method-tag">Drone Survey</span>
+          <span class="method-tag">Polycam</span>
+          <span class="method-tag">LiDAR</span>
+        </div>
+      </div>
+
+      <div class="method-card reveal reveal-delay-1">
+        <div class="method-icon" aria-hidden="true">🧠</div>
+        <div class="method-title">AI Reconstruction</div>
+        <p class="method-desc">
+          Machine learning algorithms optimise and enhance raw photogrammetric outputs — automating
+          texture processing, resolving occluded areas, and improving geometric fidelity.
+          All AI-assisted outputs are clearly distinguished from primary photogrammetric records.
+          Models are exported in open GLTF/GLB formats for maximum interoperability.
+        </p>
+        <div class="method-tags">
+          <span class="method-tag">Neural Radiance Fields</span>
+          <span class="method-tag">Mesh Optimisation</span>
+          <span class="method-tag">Texture Synthesis</span>
+          <span class="method-tag">GLTF/GLB</span>
+        </div>
+      </div>
+
+      <div class="method-card reveal reveal-delay-2">
+        <div class="method-icon" aria-hidden="true">🥽</div>
+        <div class="method-title">Immersive Experience</div>
+        <p class="method-desc">
+          Completed 3D models are deployed in VR/AR environments, enabling virtual site visits
+          for researchers, educators, and the public worldwide. Interactive walkthroughs preserve
+          the spatial experience of heritage sites for communities separated from them by distance,
+          conflict, or restricted access.
+        </p>
+        <div class="method-tags">
+          <span class="method-tag">WebXR</span>
+          <span class="method-tag">VR Walkthrough</span>
+          <span class="method-tag">AR Overlay</span>
+          <span class="method-tag">Virtual Tourism</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ PROJECTS ════════════════════════ -->
+<section id="projects" aria-labelledby="projects-heading">
+  <div class="container">
+    <p class="section-tag">Documented Sites</p>
+    <h2 class="section-title" id="projects-heading">Research Projects</h2>
+    <p class="section-lead">
+      Each project produces a multi-layered digital archive: raw photogrammetric datasets,
+      optimised 3D models, and immersive VR applications — all preserved in open formats.
+    </p>
+
+    <div class="projects-grid">
+
+      <!-- Card 1 -->
+      <article class="project-card reveal">
+        <div class="project-header">
+          <svg class="project-header-pattern" viewBox="0 0 300 180" fill="none" aria-hidden="true">
+            <rect x="0" y="0" width="300" height="180" fill="none"/>
+            <g stroke="white" stroke-width="0.8" opacity="1">
+              <line x1="0" y1="30" x2="300" y2="30"/>
+              <line x1="0" y1="60" x2="300" y2="60"/>
+              <line x1="0" y1="90" x2="300" y2="90"/>
+              <line x1="0" y1="120" x2="300" y2="120"/>
+              <line x1="0" y1="150" x2="300" y2="150"/>
+              <line x1="50" y1="0" x2="50" y2="180"/>
+              <line x1="100" y1="0" x2="100" y2="180"/>
+              <line x1="150" y1="0" x2="150" y2="180"/>
+              <line x1="200" y1="0" x2="200" y2="180"/>
+              <line x1="250" y1="0" x2="250" y2="180"/>
+            </g>
+          </svg>
+          <div class="project-icon" aria-hidden="true">🏛</div>
+          <span class="project-status">✓ Completed 2020</span>
+        </div>
+        <div class="project-body">
+          <div class="project-era">University Museum · Turkmenabat</div>
+          <h3 class="project-name">Archaeology & Geology Museum</h3>
+          <p class="project-desc">
+            Digital documentation of the museum collections at Magtymguly Turkmen State University —
+            establishing the core photogrammetric workflow that has underpinned all subsequent AHDI projects.
+          </p>
+          <ul class="project-features">
+            <li>Complete artifact catalogue digitisation</li>
+            <li>Museum-grade 3D models for archival research</li>
+            <li>Workflow development and validation</li>
+            <li>Digital preservation for future accessibility</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="project-card reveal reveal-delay-1">
+        <div class="project-header">
+          <svg class="project-header-pattern" viewBox="0 0 300 180" fill="none" aria-hidden="true">
+            <path d="M0 180 Q75 100 150 130 Q225 160 300 80" stroke="white" stroke-width="0.8" fill="none"/>
+            <path d="M0 140 Q75 60 150 90 Q225 120 300 40" stroke="white" stroke-width="0.8" fill="none"/>
+            <path d="M0 100 Q75 20 150 50 Q225 80 300 0" stroke="white" stroke-width="0.8" fill="none"/>
+            <circle cx="150" cy="90" r="40" stroke="white" stroke-width="0.6" fill="none"/>
+            <circle cx="150" cy="90" r="70" stroke="white" stroke-width="0.4" fill="none"/>
+          </svg>
+          <div class="project-icon" aria-hidden="true">🏰</div>
+          <span class="project-status">✓ Completed 2021</span>
+        </div>
+        <div class="project-body">
+          <div class="project-era">Parthian Era · 3rd Century BCE · Ahal Province</div>
+          <h3 class="project-name">Ancient Nisa Fortress</h3>
+          <p class="project-desc">
+            Comprehensive 3D documentation of the Parthian capital — one of the most significant
+            archaeological sites in Central Asia. The project addressed the complex multi-period
+            stratigraphy of this UNESCO World Heritage site.
+          </p>
+          <ul class="project-features">
+            <li>Complex architectural multi-layer documentation</li>
+            <li>Drone-assisted aerial photogrammetry</li>
+            <li>Digital preservation for archaeological research</li>
+            <li>Cross-referenced with Soviet-era excavation records</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="project-card reveal reveal-delay-2">
+        <div class="project-header">
+          <svg class="project-header-pattern" viewBox="0 0 300 180" fill="none" aria-hidden="true">
+            <path d="M150 10 L170 70 L230 70 L180 110 L200 170 L150 135 L100 170 L120 110 L70 70 L130 70 Z" stroke="white" stroke-width="0.7" fill="none"/>
+            <path d="M150 35 L163 75 L205 75 L172 98 L185 140 L150 118 L115 140 L128 98 L95 75 L137 75 Z" stroke="white" stroke-width="0.5" fill="none" opacity="0.5"/>
+            <circle cx="150" cy="90" r="85" stroke="white" stroke-width="0.5" fill="none"/>
+          </svg>
+          <div class="project-icon" aria-hidden="true">✦</div>
+          <span class="project-status">✓ Completed 2024</span>
+        </div>
+        <div class="project-body">
+          <div class="project-era">Timurid Era · 15th Century · Turkmenabat</div>
+          <h3 class="project-name">Seyitjemaleddin Mausoleum</h3>
+          <p class="project-desc">
+            A 15th-century architectural masterpiece of the Timurid period, renowned for its
+            intricate glazed tilework. AHDI produced a high-resolution 3D model capturing
+            original tile textures at sub-millimetre precision.
+          </p>
+          <ul class="project-features">
+            <li>Sub-millimetre tile texture resolution</li>
+            <li>Full VR walkthrough capability</li>
+            <li>AI-enhanced reconstruction of damaged sections</li>
+            <li>Colour-accurate digital twin for conservation</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ TEAM ════════════════════════ -->
+<section id="team" aria-labelledby="team-heading">
+  <div class="container">
+    <p class="section-tag">Research Team</p>
+    <h2 class="section-title" id="team-heading">The People Behind the Work</h2>
+    <p class="section-lead">
+      AHDI brings together specialists from Turkmenistan and China, combining
+      deep local heritage knowledge with advanced AI and ML expertise.
+    </p>
+
+    <div class="team-grid">
+
+      <div class="team-card reveal">
+        <div class="team-avatar" aria-hidden="true">AA</div>
+        <div class="team-name">Astanov Atael</div>
+        <div class="team-role">Project Lead · Digital Heritage Specialist</div>
+        <div class="team-affil">
+          East China Normal University – Turkmenistan Pedagogical Institute Joint Project
+        </div>
+        <div class="team-focus-label">Research Focus</div>
+        <div class="team-focus">
+          Field photogrammetry methodology, 3D reconstruction pipelines, Silk Road architectural heritage documentation.
+        </div>
+        <div class="team-bg">
+          Former VR/AR specialist, Ministry of Science of Turkmenistan.
+        </div>
+      </div>
+
+      <div class="team-card reveal reveal-delay-1">
+        <div class="team-avatar" aria-hidden="true">AA</div>
+        <div class="team-name">Astanova Arman</div>
+        <div class="team-role">AI / ML Specialist</div>
+        <div class="team-affil">
+          East China Normal University, Shanghai
+        </div>
+        <div class="team-focus-label">Research Focus</div>
+        <div class="team-focus">
+          AI optimisation of 3D heritage models, automated texture processing, machine learning for photogrammetric enhancement.
+        </div>
+        <div class="team-bg">
+          MSc candidate in Artificial Intelligence and Machine Learning.
+        </div>
+      </div>
+
+      <div class="team-card reveal reveal-delay-2">
+        <div class="team-avatar" aria-hidden="true">AS</div>
+        <div class="team-name">Astanova Sevginur</div>
+        <div class="team-role">Technical Advisor</div>
+        <div class="team-affil">
+          Turkmen State Pedagogical Institute named after Seyitnazar Seydi
+        </div>
+        <div class="team-focus-label">Research Focus</div>
+        <div class="team-focus">
+          Technical equipment consultation, radio-physics methodology, instrumentation quality assurance for field surveys.
+        </div>
+        <div class="team-bg">
+          Senior Lecturer in Radio-physics and Computer Technologies.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ PUBLICATIONS ════════════════════════ -->
+<section id="publications" aria-labelledby="pub-heading">
+  <div class="container">
+    <p class="section-tag">Research Output</p>
+    <h2 class="section-title" id="pub-heading">Publications</h2>
+    <p class="section-lead">
+      Our methodology is grounded in peer-reviewed academic research and presented
+      at international conferences. All publications are openly accessible.
+    </p>
+
+    <div class="pub-list">
+
+      <!-- Pub 1 -->
+      <div class="pub-card reveal">
+        <div>
+          <div class="pub-year">2023 · CyberLeninka · RSCI</div>
+          <div class="pub-title">Digital Methods for Recording Archaeological Finds in Field Conditions</div>
+          <div class="pub-title-ru">Цифровые методы фиксации археологических находок в полевых условиях</div>
+          <div class="pub-meta">
+            <strong>Author:</strong> Astanov Atael Ferrukhovich<br/>
+            <strong>Journal:</strong> Vestnik Nauki i Tvorchestva (Bulletin of Science and Creativity)<br/>
+            <strong>Database:</strong> CyberLeninka — Russian Science Citation Index
+          </div>
+          <div class="pub-tags">
+            <span class="pub-tag">Photogrammetry</span>
+            <span class="pub-tag">3D Modelling</span>
+            <span class="pub-tag">Archaeology</span>
+            <span class="pub-tag">Field Documentation</span>
+            <span class="pub-tag">VR</span>
+          </div>
+        </div>
+        <a class="pub-link" href="https://cyberleninka.ru/article/n/tsifrovye-metody-fiksatsiya-arheologicheskih-nahodok-v-polevyh-usloviyah" target="_blank" rel="noopener noreferrer" aria-label="Open publication on CyberLeninka">
+          Read ↗
+        </a>
+      </div>
+
+      <!-- Pub 2 -->
+      <div class="pub-card reveal">
+        <div>
+          <div class="pub-year">2023 · CyberLeninka · Innova Science</div>
+          <div class="pub-title">Unlocking Possibilities: Polycam Revolution in Archaeology Through Mobile Application</div>
+          <div class="pub-title-ru">Разблокирование возможностей Polycam: революция в археологии с помощью мобильного приложения</div>
+          <div class="pub-meta">
+            <strong>Authors:</strong> AHDI Research Team<br/>
+            <strong>Journal:</strong> Innova Science — Collection of Scientific Works<br/>
+            <strong>Database:</strong> CyberLeninka — Russian Science Citation Index
+          </div>
+          <div class="pub-tags">
+            <span class="pub-tag">Mobile Photogrammetry</span>
+            <span class="pub-tag">Polycam</span>
+            <span class="pub-tag">Archaeological Documentation</span>
+            <span class="pub-tag">Field Methods</span>
+          </div>
+        </div>
+        <a class="pub-link" href="https://cyberleninka.ru/article/n/razblokirovanie-vozmozhnostey-polycam-revolyutsiya-v-arheologii-s-pomoschyu-mobilnogo-prilozheniya" target="_blank" rel="noopener noreferrer" aria-label="Open Polycam publication on CyberLeninka">
+          Read ↗
+        </a>
+      </div>
+
+      <!-- Pub 3 -->
+      <div class="pub-card reveal">
+        <div>
+          <div class="pub-year">2023 · eLibrary.ru · ID: 50089567</div>
+          <div class="pub-title">Digital Methods in Archaeological Documentation</div>
+          <div class="pub-title-ru">Цифровые методы в археологической документации</div>
+          <div class="pub-meta">
+            <strong>Authors:</strong> AHDI Research Team<br/>
+            <strong>Collection:</strong> Innova Science Scientific Works (11.04.2023)<br/>
+            <strong>Database:</strong> eLibrary.ru — Russian Scientific Digital Library
+          </div>
+          <div class="pub-tags">
+            <span class="pub-tag">Digital Archaeology</span>
+            <span class="pub-tag">Heritage Documentation</span>
+            <span class="pub-tag">3D Methods</span>
+          </div>
+        </div>
+        <a class="pub-link" href="https://elibrary.ru/item.asp?id=50089567" target="_blank" rel="noopener noreferrer" aria-label="Open publication on eLibrary.ru">
+          Read ↗
+        </a>
+      </div>
+
+      <!-- Pub 4 -->
+      <div class="pub-card reveal">
+        <div>
+          <div class="pub-year">2024 · International Conference · Altai State University</div>
+          <div class="pub-title">Echo of Time: Digital Revival of Historical Heritage through Photogrammetry and Artificial Intelligence</div>
+          <div class="pub-title-ru">Эхо времени: цифровое возрождение исторического наследия через фотограмметрию и искусственный интеллект</div>
+          <div class="pub-meta">
+            <strong>Author:</strong> Astanov Atael Ferrukhovich<br/>
+            <strong>Conference:</strong> XII International Scientific Conference "Social Integration and Development of Ethnocultures in the Eurasian Space"<br/>
+            <strong>Institution:</strong> Altai State University, Barnaul, Russia<br/>
+            <strong>Session:</strong> Youth Research — Social Integration of Ethnic Cultures in Digitalization Conditions
+          </div>
+          <div class="pub-tags">
+            <span class="pub-tag">AI Heritage</span>
+            <span class="pub-tag">Photogrammetry</span>
+            <span class="pub-tag">Digital Revival</span>
+            <span class="pub-tag">International Conference</span>
+            <span class="pub-tag">Eurasian Studies</span>
+          </div>
+        </div>
+        <a class="pub-link" href="https://forum-integration.asu.ru/wp-content/uploads/2024/06/Programma_konferenciya_Sidec_2024_04062024.pdf" target="_blank" rel="noopener noreferrer" aria-label="Open conference programme PDF">
+          Programme ↗
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ PARTNERS ════════════════════════ -->
+<section id="partners" aria-labelledby="partners-heading">
+  <div class="container">
+    <p class="partners-intro" id="partners-heading">Collaborating Institutions</p>
+    <div class="partners-row">
+      <div class="partner-item reveal">
+        <div class="partner-flag" aria-hidden="true">🇨🇳</div>
+        <div class="partner-name">East China Normal University</div>
+        <div class="partner-country">Shanghai, China</div>
+      </div>
+      <div class="partner-item reveal reveal-delay-1">
+        <div class="partner-flag" aria-hidden="true">🇹🇲</div>
+        <div class="partner-name">Turkmen State Pedagogical Institute<br/>named after Seyitnazar Seydi</div>
+        <div class="partner-country">Turkmenistan</div>
+      </div>
+      <div class="partner-item reveal reveal-delay-2">
+        <div class="partner-flag" aria-hidden="true">🇹🇲</div>
+        <div class="partner-name">Ministry of Science and Education of Turkmenistan</div>
+        <div class="partner-country">Original Institutional Affiliation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gold divider -->
+<div class="geo-divider" aria-hidden="true"></div>
+
+<!-- ════════════════════════ CONTACT ════════════════════════ -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <p class="section-tag">Get in Touch</p>
+    <h2 class="section-title" id="contact-heading">Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <p>
+          We welcome correspondence from heritage researchers, archaeologists, conservators, and
+          institutions with an interest in Central Asian heritage digitisation. We are particularly
+          interested in collaborative opportunities related to the Merv archaeological complex
+          and other Zarafshan-Karakum Corridor sites.
+        </p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">✉</div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value">
+                <a href="mailto:amul.heritagetm@gmail.com">amul.heritagetm@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="contact-item-label">Locations</div>
+              <div class="contact-item-value" style="color:rgba(255,255,255,0.7)">
+                Ashgabat &amp; Turkmenabat, Turkmenistan<br/>
+                Shanghai, China
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">🔗</div>
+            <div>
+              <div class="contact-item-label">Academic Profiles</div>
+              <div class="contact-item-value">
+                <a href="https://cyberleninka.ru" target="_blank" rel="noopener noreferrer">CyberLeninka</a>
+                &nbsp;·&nbsp;
+                <a href="https://elibrary.ru" target="_blank" rel="noopener noreferrer">eLibrary.ru</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">🌐</div>
+            <div>
+              <div class="contact-item-label">Geographic Focus</div>
+              <div class="contact-item-value" style="color:rgba(255,255,255,0.7)">
+                Zarafshan-Karakum Corridor<br/>UNESCO World Heritage · Merv–Amul Route
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-box reveal">
+        <h3>Send a Message</h3>
+        <p>For research inquiries, collaboration proposals, or media requests.</p>
+        <div class="form-field">
+          <label for="cf-name">Full Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Dr. Jane Smith" autocomplete="name"/>
+        </div>
+        <div class="form-field">
+          <label for="cf-email">Email Address</label>
+          <input type="email" id="cf-email" name="email" placeholder="researcher@university.edu" autocomplete="email"/>
+        </div>
+        <div class="form-field">
+          <label for="cf-affil">Institutional Affiliation</label>
+          <input type="text" id="cf-affil" name="affiliation" placeholder="University / Organisation / Independent"/>
+        </div>
+        <div class="form-field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Please describe your research interest or collaboration proposal…"></textarea>
+        </div>
+        <a href="mailto:amul.heritagetm@gmail.com" class="btn-primary" style="display:inline-block;font-family:var(--font-body);font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;padding:1em 2.4em;background:var(--gold);color:var(--navy-deep);border-radius:var(--radius);border:none;cursor:pointer;text-decoration:none;">
+          Send via Email
+        </a>
+        <p class="form-note">
+          Alternatively, email us directly at
+          <a href="mailto:amul.heritagetm@gmail.com" style="color:rgba(201,169,97,0.7)">amul.heritagetm@gmail.com</a>.
+          All inquiries acknowledged within 7 business days.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════ FOOTER ════════════════════════ -->
+<footer>
+  <div>
+    <div class="footer-brand">Amul Heritage Digital Initiative</div>
+    <div class="footer-tagline">Digital Preservation of Silk Road Heritage · Zarafshan-Karakum Corridor</div>
+  </div>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="#about">About</a>
+    <a href="#methodology">Methods</a>
+    <a href="#projects">Projects</a>
+    <a href="#team">Team</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="footer-copy">© 2024 Amul Heritage Digital Initiative · amul.heritagetm@gmail.com</div>
+</footer>
+
+<!-- ════════════════════════ SCRIPTS ════════════════════════ -->
+<script>
+/* ── Starfield ── */
+(function(){
+  const c = document.getElementById('stars-container');
+  if(!c) return;
+  for(let i=0;i<120;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random()*2+0.5;
+    s.style.cssText = `
+      left:${Math.random()*100}%;
+      top:${Math.random()*85}%;
+      width:${size}px;height:${size}px;
+      animation-delay:${Math.random()*4}s;
+      animation-duration:${2+Math.random()*3}s;
+    `;
+    c.appendChild(s);
+  }
+})();
+
+/* ── Scroll reveal ── */
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    },{threshold:0.1});
+    els.forEach(el=>obs.observe(el));
+  } else {
+    els.forEach(el=>el.classList.add('visible'));
+  }
+})();
+
+/* ── Nav shrink on scroll ── */
+(function(){
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll',()=>{
+    nav.style.background = window.scrollY > 60
+      ? 'rgba(10,24,40,0.98)'
+      : 'rgba(18,37,64,0.96)';
+  },{passive:true});
+})();
+</script>
+
+</body>
+</html>
