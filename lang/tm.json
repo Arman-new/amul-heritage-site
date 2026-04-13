@@ -1,1 +1,251 @@
-﻿
+﻿{
+  "nav": {
+    "about": "Biz barada",
+    "methodology": "Usullar",
+    "projects": "Taslamalar",
+    "team": "Topar",
+    "publications": "Neşirler",
+    "contact": "Habarlaşmak",
+    "exploreProjects": "Taslamalary synla"
+  },
+  "hero": {
+    "eyebrow": "Zarafşan-Garagum koridory · ESUNKO Bütindünýä mirasy",
+    "titleLine1": "Amul Mirasy",
+    "titleLine2": "Sanly Başlangyç",
+    "subtitle": "Beýik Ýüpek ýolunyň mirasyny sanly tehnologiýalar arkaly gorap saklamak",
+    "description": "Halkara gözleg hyzmatdaşlygy: fotogrammetriýa, suny intellektli rekonstruksiýa we VR/AR tehnologiýalaryny birleşdirip, Türkmenistanyň iň möhüm Ýüpek ýolu ýadygärlikleriniň ýokary takyk sanly ekwiwalentlerini döredýär — Nisanyň parfiýa galalaryndan başlap, Seýitjemaleddiniň firuzeli kafelçiligine çenli.",
+    "btnProjects": "Taslamalarymyza syn ediň",
+    "btnPublications": "Neşirleri görkez",
+    "stats": {
+      "years": "Gözleg ýyllary",
+      "sites": "Jurnal ýazylan ýerler",
+      "publications": "Syn gözden geçirilen işler",
+      "countries": "Ýurtlar"
+    },
+    "scroll": "Aşak aýla"
+  },
+  "about": {
+    "tag": "Başlangyç barada",
+    "title": "Howp astyndaky mirasy jurnal ýazmak",
+    "p1": "Amul Mirasy Sanly Başlangyjy (AHDI) Zarafşan-Garagum koridorynyň — gadymy Ýüpek ýolunyň Türkmenistan böleginiň (Merg–Amul ugry) ESUNKO Bütindünýä mirasyny jurnal ýazmak we sanly gorap saklamak üçin döredilen halkara gözleg hyzmatdaşlygydyr.",
+    "p2": "Biz howp astyndaky arheologik ýadygärlikleriň ýokary takyk sanly ekwiwalentlerini döretmek üçin iň öňdebaryjy fotogrammetriýa, suny intellektli 3D rekonstruksiýa we çümüp barýan VR tehnologiýalaryny ulanýarys. Bu sanly ýazgylar geljek nesiller üçin ylmy arhiw hem-de bilim çeşmesi bolup hyzmat edýär.",
+      "p3": "Biziň işimiz arheologiýa, kompýuter ylmy we medeni mirasy gorap saklamak derslerini birleşdirýär: Hytaýyň suny intellekt we maşyn öwreniş ugrundaky tejribesini Türkmenistanyň ýerli meýdan iş tejribesi bilen utgaşdyrýar.",
+    "statActive": "Işjeň",
+    "statSites": "Jurnal ýazylan ýerler",
+    "statTeam": "Halkara topar",
+    "timeline": {
+      "title": "Taslamanyň wagty",
+      "entry1": {
+        "year": "2020",
+        "event": "Başlangyjyň döredilmegi",
+        "detail": "Magtymguly adyndaky Türkmen döwlet uniwersitetiniň muzeýlerinde ilkinji jurnal ýazma taslamasy; artefakt sanlylaşdyryş iş tertibi döredildi."
+      },
+      "entry2": {
+        "year": "2021",
+        "event": "Gadymy Nisa galasy",
+        "detail": "Parfiýa paýtagtynyň giňişleýin 3D jurnal ýazmagy; çylşyrymly binagärlik ölçegi tamamlandy."
+      },
+      "entry3": {
+        "year": "2023",
+        "event": "Akademik neşirler",
+        "detail": "CyberLeninka we eLibrary.ru ulgamlarynda üç syn gözden geçirilen makala neşir edildi; usulyýet resmileşdirildi."
+      },
+      "entry4": {
+        "year": "2024",
+        "event": "Seýitjemaleddin kümmeti",
+        "detail": "Ýokary düýpli VR-taýýar model tamamlandy; Ałtay döwlet uniwersitetinde halkara konferensiýada çykyş edildi."
+      },
+      "entry5": {
+        "year": "2025–26",
+        "event": "Merg arheologik toplumy",
+        "detail": "Merg oazisiniň jurnal ýazylmagy meýilleşdirilýär; giňeldilen suny intellektli rekonstruksiýa iş tertibi."
+      }
+    }
+  },
+  "methodology": {
+    "tag": "Biziň çemeleşmegimiz",
+    "title": "Usulyýet",
+    "lead": "Biz Ýüpek ýolunyň miras ýerleriniň doly, köpeldilip bilinýän we halka açyk ýazgylaryny döretmek üçin üç sany birinji derejeli sanly tehnologiýany birleşdirýäris.",
+    "photogrammetry": {
+      "title": "Fotogrammetriýa",
+      "desc": "Professional enjamlar we Polycam ýaly elýeterli mobil programmalar arkaly ýokary takyklykly 3D ýazga almak. Müňlerçe bir-biriniň üstüne düşýän suratlar «gurluş-hereketden» algoritmleri arkaly işlenip, millimetr takyklygyndaky dykyz nokat bulutlary we dokumaly torlar döredilýär. Meýdan jurnal ýazmagy ýerinde, ýadygärlige az päsgelçilik bilen geçirilýär.",
+      "tags": ["Gurluş-hereketden", "Dron bilen ölçeg", "Polycam", "LiDAR"]
+    },
+    "ai": {
+      "title": "Suny intellektli rekonstruksiýa",
+      "desc": "Maşyn öwreniş algoritmleri çig fotogrammetrik netijeleri optimallaşdyrýar we gowulaşdyrýar — dokumalary işlemegi awtomatlaşdyrýar, ýapyk ýerleri çözýär we geometrik takyklygy ýokarlandyrýar. Suny intellekt bilen edilen netijeler esasy fotogrammetrik ýazgylardan aç-açan tapawutlandyrylýar. Modeller iň ýokary işleşik üçin açyk GLTF/GLB formatlarynda eksport edilýär.",
+      "tags": ["Neýron radian meýdanlary", "Tor optimizasiýasy", "Dokuma sintezi", "GLTF/GLB"]
+    },
+    "immersive": {
+      "title": "Çümüp barýan tejribe",
+      "desc": "Tamamlanan 3D modeller VR/AR gurşawlarynda ýerleşdirilýär, bu bolsa bütindünýä gözlegçiler, mugallymlar we halk üçin wirtual ýer zyýaratlaryny mümkin edýär. Interaktiw gezelençler miras ýerlerini aralyk, konflikt ýa-da elýeterlilik çäkliligi sebäpli olardan aýrylan jemagatlar üçin giňişlik tejribesini gorap saklaýar.",
+      "tags": ["WebXR", "VR gezelenç", "AR örtügi", "Wirtual syýahatçylyk"]
+    }
+  },
+  "projects": {
+    "tag": "Jurnal ýazylan ýerler",
+    "title": "Gözleg taslamalary",
+    "lead": "Her taslama köp gatlakly sanly arhiw döredýär: çig fotogrammetrik maglumatlar toplumy, optimizirlenen 3D modeller we çümüp barýan VR programmalary — hemmesi açyk formatlarda saklanýar.",
+    "card1": {
+      "status": "✓ 2020-nji ýylda tamamlandy",
+      "era": "Uniwersitet muzeýi · Türkmenabat",
+      "name": "Arheologiýa we geologiýa muzeýi",
+      "desc": "Magtymguly adyndaky Türkmen döwlet uniwersitetiniň muzeý kolleksiýalaryny sanly jurnal ýazmak — soňky ähli AHDI taslamalarynyň esasyny düzen esasy fotogrammetrik iş tertibini döretdi.",
+      "features": [
+        "Artefakt katalogynyň doly sanlylaşdyrylmagy",
+        "Arhiw gözlegleri üçin muzeý derejeli 3D modeller",
+        "Iş tertibini ösdürmek we tassyklamak",
+        "Geljek elýeterlilik üçin sanly gorap saklamak"
+      ]
+    },
+    "card2": {
+      "status": "✓ 2021-nji ýylda tamamlandy",
+      "era": "Parfiýa döwri · Miladydan öňki III asyr · Ahal welaýaty",
+      "name": "Gadymy Nisa galasy",
+      "desc": "Parfiýa paýtagtynyň giňişleýin 3D jurnal ýazmagy — Merkezi Aziýanyň iň möhüm arheologik ýerlerinden biri. Bu taslama ESUNKO Bütindünýä mirasynyň çylşyrymly köp döwürli stratigrafiýasyny öz içine aldy.",
+      "features": [
+        "Çylşyrymly binagärligiň köp gatlakly jurnal ýazmagy",
+        "Dron kömegi bilen howa fotogrammetriýasy",
+        "Arheologik gözlegler üçin sanly gorap saklamak",
+        "Sowet döwründäki gazuw ýazgylary bilen çapraz salgylanma"
+      ]
+    },
+    "card3": {
+      "status": "✓ 2024-nji ýylda tamamlandy",
+      "era": "Timuriler döwri · XV asyr · Türkmenabat",
+      "name": "Seýitjemaleddin kümmeti",
+      "desc": "XV asyrda Timuriler döwrüniň binagärlik şaheseri, çylşyrymly syrlanan kafelçiligi bilen meşhur. AHDI, asyl kafel dokumalaryny submillimetr takyklygynda ýazga alýan ýokary düýpli 3D model döretdi.",
+      "features": [
+        "Submillimetr kafel dokuma çözgüdi",
+        "Doly VR gezelenç mümkinçiligi",
+        "Zeper ýeten bölekleriň suny intellekt bilen täzeden gurluşy",
+        "Reňk takyk sanly ekwiwalent (gorap saklamak üçin)"
+      ]
+    }
+  },
+  "team": {
+    "tag": "Gözleg topary",
+    "title": "Işiň yzynda duran adamlar",
+    "lead": "AHDI Türkmenistandan we Hytaýdan hünärmenleri birleşdirýär, çuňňur ýerli miras bilimlerini öňdebaryjy suny intellekt we maşyn öwreniş tejribesi bilen utgaşdyrýar.",
+    "member1": {
+      "initials": "AA",
+      "name": "Astanow Atael",
+      "role": "Taslama ýolbaşçysy · Sanly miras hünärmeni",
+      "affiliation": "Gündogar Hytaý Normal Uniwersiteti – Türkmenistan Pedagogika Institutynyň bilelikdäki taslamasy",
+      "focusLabel": "Gözleg ugry",
+      "focus": "Meýdan fotogrammetriýa usulyýeti, 3D rekonstruksiýa iş tertipleri, Ýüpek ýolunyň binagärlik mirasyny jurnal ýazmak.",
+      "background": "Öňki VR/AR hünärmeni, Türkmenistanyň Ylym ministrligi."
+    },
+    "member2": {
+      "initials": "AA",
+      "name": "Astanowa Arman",
+      "role": "Suny intellekt / ML hünärmeni",
+      "affiliation": "Gündogar Hytaý Normal Uniwersiteti, Şanhaý",
+      "focusLabel": "Gözleg ugry",
+      "focus": "3D miras modellerini suny intellekt bilen optimallaşdyrmak, awtomatlaşdyrylan dokuma işlemek, fotogrammetriýany gowulaşdyrmak üçin maşyn öwrenişi.",
+      "background": "Suny intellekt we maşyn öwrenişi ugry boýunça magistr kandidaty."
+    },
+    "member3": {
+      "initials": "AS",
+      "name": "Astanowa Sewginur",
+      "role": "Tehniki geňeşçi",
+      "affiliation": "Seýitnazar Seýdi adyndaky Türkmen döwlet pedagogika instituty",
+      "focusLabel": "Gözleg ugry",
+      "focus": "Tehniki enjam konsultasiýasy, radio-fizika usulyýeti, meýdan ölçegleri üçin gurallaryň hilini üpjün etmek.",
+      "background": "Radio-fizika we kompýuter tehnologiýalary kafedrasynyň uly mugallymy."
+    }
+  },
+  "publications": {
+    "tag": "Gözleg netijeleri",
+    "title": "Neşirler",
+    "lead": "Biziň usulyýetimiz syn gözden geçirilen akademik gözleglere esaslanýar we halkara konferensiýalarda hödürlenýär. Neşirleriň hemmesi açyk elýeterlidir.",
+    "pub1": {
+      "year": "2023 · CyberLeninka · RSCI",
+      "title": "Meýdan ýagdaýynda arheologik tapyndylary ýazga almagyň sanly usullary",
+      "titleRu": "Цифровые методы фиксации археологических находок в полевых условиях",
+      "author": "Awtor: Astanow Atael Ferruhowiç",
+      "journal": "Žurnal: Vestnik Nauki i Tworçestwa (Ylym we döredijilik habarçysy)",
+      "database": "Maglumat bazasy: CyberLeninka — Rus ylym sitirleme indeksi",
+      "tags": ["Fotogrammetriýa", "3D modelleme", "Arheologiýa", "Meýdan jurnal ýazmagy", "VR"],
+      "linkText": "Okamak ↗"
+    },
+    "pub2": {
+      "year": "2023 · CyberLeninka · Innova Science",
+      "title": "Polycam-yň mümkinçiliklerini açmak: ykjam programma arkaly arheologiýada rewolýusiýa",
+      "titleRu": "Разблокирование возможностей Polycam: революция в археологии с помощью мобильного приложения",
+      "authors": "Awtorlar: AHDI Gözleg topary",
+      "journal": "Žurnal: Innova Science — Ylmy işler ýygyndysy",
+      "database": "Maglumat bazasy: CyberLeninka — Rus ylym sitirleme indeksi",
+      "tags": ["Ykjam fotogrammetriýa", "Polycam", "Arheologik jurnal ýazmagy", "Meýdan usullary"],
+      "linkText": "Okamak ↗"
+    },
+    "pub3": {
+      "year": "2023 · eLibrary.ru · ID: 50089567",
+      "title": "Arheologik jurnal ýazmagynda sanly usullar",
+      "titleRu": "Цифровые методы в археологической документации",
+      "authors": "Awtorlar: AHDI Gözleg topary",
+      "journal": "Ýygyndy: Innova Science ylmy işleri (11.04.2023)",
+      "database": "Maglumat bazasy: eLibrary.ru — Rus ylmy sanly kitaphanasy",
+      "tags": ["Sanly arheologiýa", "Miras jurnal ýazmagy", "3D usullary"],
+      "linkText": "Okamak ↗"
+    },
+    "pub4": {
+      "year": "2024 · Halkara konferensiýa · Ałtay döwlet uniwersiteti",
+      "title": "Wagtyň sesi: fotogrammetriýa we suny intellekt arkaly taryhy mirasy sanly janlandyryş",
+      "titleRu": "Эхо времени: цифровое возрождение исторического наследия через фотограмметрию и искусственный интеллект",
+      "author": "Awtor: Astanow Atael Ferruhowiç",
+      "conference": "Konferensiýa: XII Halkara ylmy konferensiýa «Ýewraziýa giňişliginde etnik medeniýetleriň sosial integrasiýasy we ösüşi»",
+      "institution": "Gurama: Ałtay döwlet uniwersiteti, Barnaul, Rosiýa",
+      "session": "Bölüm: Ýaşlar ylmy — Sanlylaşma şertlerinde etnik medeniýetleriň sosial integrasiýasy",
+      "tags": ["Suny intellekt we miras", "Fotogrammetriýa", "Sanly janlandyryş", "Halkara konferensiýa", "Ýewraziýa gözlegleri"],
+      "linkText": "Maksatnama ↗"
+    }
+  },
+  "partners": {
+    "title": "Hyzmatdaş edaralar",
+    "partner1": {
+      "flag": "🇨🇳",
+      "name": "Gündogar Hytaý Normal Uniwersiteti",
+      "country": "Şanhaý, Hytaý"
+    },
+    "partner2": {
+      "flag": "🇹🇲",
+      "name": "Seýitnazar Seýdi adyndaky Türkmen döwlet pedagogika instituty",
+      "country": "Türkmenistan"
+    },
+    "partner3": {
+      "flag": "🇹🇲",
+      "name": "Türkmenistanyň Ylym we bilim ministrligi",
+      "country": "Başlangyç edara degişliligi"
+    }
+  },
+  "contact": {
+    "tag": "Habarlaşmak",
+    "title": "Habarlaşmak üçin",
+    "description": "Merkezi Aziýa mirasyny sanlylaşdyrmak bilen gyzyklanýan miras gözlegçilerinden, arheologlardan, restawratorlardan we edaralardan hat alyşmaga hoş geldiň diýýäris. Esasanam Merg arheologik toplumy we Zarafşan-Garagum koridorynyň beýleki ýerleri bilen baglanyşykly hyzmatdaşlyk mümkinçilikleri bilen gyzyklanýarys.",
+    "emailLabel": "E-poçta",
+    "emailValue": "amul.heritagetm@gmail.com",
+    "locationLabel": "Ýerleşýän ýerleri",
+    "locationValue": "Aşgabat we Türkmenabat, Türkmenistan\nŞanhaý, Hytaý",
+    "profilesLabel": "Akademik profiller",
+    "focusLabel": "Geografik üns merkezi",
+    "focusValue": "Zarafşan-Garagum koridory\nESUNKO Bütindünýä mirasy · Merg–Amul ugry",
+    "formTitle": "Hat ibermek",
+    "formSubtitle": "Gözleg soraglary, hyzmatdaşlyk teklipleri ýa-da metbugat haýyşlary üçin.",
+    "formName": "Doly ady",
+    "formNamePlaceholder": "Dr. Jane Smith",
+    "formEmail": "E-poçta salgysy",
+    "formEmailPlaceholder": "gözlegçi@uniwersitet.edu",
+    "formAffiliation": "Edara degişliligi",
+    "formAffiliationPlaceholder": "Uniwersitet / Gurama / Garaşsyz",
+    "formMessage": "Hat",
+    "formMessagePlaceholder": "Gözleg gyzyklanmaňyzy ýa-da hyzmatdaşlyk teklibiňizi beýan ediň…",
+    "formButton": "E-poçta bilen ibermek",
+    "formNote": "Alternatively, email us directly at amul.heritagetm@gmail.com. All inquiries acknowledged within 7 business days."
+  },
+  "footer": {
+    "brand": "Amul Mirasy Sanly Başlangyjy",
+    "tagline": "Ýüpek ýoly mirasyny sanly gorap saklamak · Zarafşan-Garagum koridory",
+    "copyright": "© 2024 Amul Mirasy Sanly Başlangyjy · amul.heritagetm@gmail.com"
+  }
+}

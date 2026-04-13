@@ -1,15 +1,17 @@
-﻿function loadLanguage(lang){
-    fetch('./lang/${lang}.json')
+﻿function loadLanguage(lang) {
+    fetch(`lang/${lang}.json`)
         .then(response => response.json())
         .then(data => {
-            document.querySelectorAll('[data-i18n]').forEach(el =>{
+            document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if(data[key]){
-                    el.textContent = data[key];
-                }
+                const value = key.split('.').reduce((obj, k) => obj && obj[k], data);
+                if (value) el.textContent = value;
             });
-        })
-        .catch(error => console.error('Error Loading Language:', error));
-
+        });
 }
+
+function setLang(lang) {
+    loadLanguage(lang);
+}
+
 loadLanguage('en');
