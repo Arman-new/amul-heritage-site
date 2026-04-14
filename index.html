@@ -31,11 +31,11 @@
     <li><a href="#publications" data-i18n="nav.publications">Publications</a></li>
     <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
   </ul>
-  <a href="#projects" class="nav-cta" aria-label="Explore our projects">Explore Projects</a>
-<div class="lang-switch">
+  <a href="#projects" class="nav-cta" aria-label="Explore our projects" data-i18n="nav.exploreProjects">Explore Projects</a>
+  <div class="lang-switch">
   <button onclick="setLang('en')">EN</button>
   <button onclick="setLang('ru')">RU</button>
-  <button onclick="setLang('zh')">中文</button>
+  <button onclick="setLang('cn')">中文</button>
   <button onclick="setLang('tm')">TKM</button>
 </div>
 </nav>
@@ -691,7 +691,7 @@
 
 <!-- ════════════════════════ SCRIPTS ════════════════════════ -->
 <script>
-/* ── Starfield (unchanged) ── */
+/* ── Starfield ── */
 (function(){
   const c = document.getElementById('stars-container');
   if(!c) return;
@@ -710,7 +710,7 @@
   }
 })();
 
-/* ── Scroll reveal (unchanged) ── */
+/* ── Scroll reveal ── */
 (function(){
   const els = document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
@@ -728,7 +728,7 @@
   }
 })();
 
-/* ── Nav shrink on scroll (unchanged) ── */
+/* ── Nav shrink on scroll ── */
 (function(){
   const nav = document.getElementById('nav');
   window.addEventListener('scroll',()=>{
@@ -737,63 +737,10 @@
       : 'rgba(18,37,64,0.96)';
   },{passive:true});
 })();
-
-/* ── NEW: Language Switching Functions ── */
-const supportedLangs = ['en', 'cn', 'tm', 'ru'];
-let currentFetchController = null;
-
-function loadLanguage(lang) {
-    if (!supportedLangs.includes(lang)) lang = 'en';
-
-    if (currentFetchController) currentFetchController.abort();
-    currentFetchController = new AbortController();
-
-    fetch(`lang/${lang}.json`, { signal: currentFetchController.signal })
-        .then(response => {
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-            return response.json();
-        })
-        .then(data => {
-            document.querySelectorAll('[data-i18n]').forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                const value = key.split('.').reduce((obj, k) => obj && obj[k], data);
-                if (value && typeof value === 'string') el.textContent = value;
-            });
-            
-            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-                const key = el.getAttribute('data-i18n-placeholder');
-                const value = key.split('.').reduce((obj, k) => obj && obj[k], data);
-                if (value && typeof value === 'string') el.placeholder = value;
-            });
-            
-            document.documentElement.lang = lang === 'cn' ? 'zh' : lang;
-        })
-        .catch(error => {
-            if (error.name === 'AbortError') return;
-            console.error("Could not load language file:", error);
-            if (lang !== 'en') loadLanguage('en');
-        });
-}
-
-function setLang(lang) {
-    if (!supportedLangs.includes(lang)) lang = 'en';
-    loadLanguage(lang);
-    localStorage.setItem('preferred-lang', lang);
-}
-
-window.onload = () => {
-    let userLang = 'en';
-    const savedLang = localStorage.getItem('preferred-lang');
-    if (savedLang && supportedLangs.includes(savedLang)) {
-        userLang = savedLang;
-    } else {
-        const browserLang = navigator.language || navigator.userLanguage;
-        const primaryLang = browserLang.split('-')[0];
-        if (primaryLang === 'zh') userLang = 'cn';
-        else if (primaryLang === 'tk' || primaryLang === 'tm') userLang = 'tm';
-        else if (primaryLang === 'ru') userLang = 'ru';
-        else if (primaryLang === 'en') userLang = 'en';
-    }
-    loadLanguage(userLang);
-};
 </script>
+
+<!-- Link to external language JS file -->
+<script src="js/lang.js"></script>
+
+</body>
+</html>
