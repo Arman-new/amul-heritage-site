@@ -5,7 +5,7 @@ function loadLanguage(lang) {
     if (!supportedLangs.includes(lang)) lang = 'en';
 
     // Fetch from same folder as HTML (no 'lang/' prefix)
-    fetch(`../lang/${lang}.json`) 
+    fetch(`langjs/${lang}.json`)
         .then(response => {
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             return response.json();
