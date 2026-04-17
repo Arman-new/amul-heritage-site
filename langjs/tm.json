@@ -9,11 +9,11 @@
     "exploreProjects": "Taslamalary synla"
   },
   "hero": {
-    "eyebrow": "Zarafşan-Garagum koridory · UNESKO Bütindünýä mirasy",
+    "eyebrow": "Zarafşan-Garagum koridory · UNESCO Bütindünýä mirasy",
     "titleLine1": "Amul Mirasy",
     "titleLine2": "Sanly Başlangyç",
     "subtitle": "Beýik Ýüpek ýolunyň mirasyny sanly tehnologiýalar arkaly gorap saklamak",
-    "description": "Halkara gözleg hyzmatdaşlygy: fotogrammetriýa, sanly intellektli rekonstruksiýa we VR/AR tehnologiýalaryny birleşdirip, Türkmenistanyň iň möhüm Ýüpek ýolu ýadygärlikleriniň ýokary takyk sanly ekwiwalentlerini döredýär — Nisanyň Parfiýa galalaryndan başlap, Änew şäheriniň Seýitjemaleddiniň minaterine çenli.",
+    "description": "Halkara gözleg hyzmatdaşlygy: fotogrammetriýa, sanly intellektli rekonstruksiýa we VR/AR tehnologiýalaryny birleşdirip, Türkmenistanyň iň möhüm Ýüpek ýolu ýadygärlikleriniň ýokary takyk sanly ekwiwalentlerini döredýär — Nisanyň Parfiýa galalaryndan başlap, Änew şäheriniň Seýitjemaleddiniň minaralaryna çenli.",
     "btnProjects": "Taslamalarymyza syn ediň",
     "btnPublications": "Neşirleri görkez",
     "stats": {
@@ -29,7 +29,7 @@
     "title": "Howp astyndaky mirasy jurnal ýazmak",
     "p1": "Amul Mirasy Sanly Başlangyjy (AHDI) Zarafşan-Garagum koridorynyň — gadymy Ýüpek ýolunyň Türkmenistan böleginiň (Merg–Amul ugry) ESUNKO Bütindünýä mirasyny jurnal ýazmak we sanly gorap saklamak üçin döredilen halkara gözleg hyzmatdaşlygydyr.",
     "p2": "Biz howp astyndaky arheologik ýadygärlikleriň ýokary takyk sanly ekwiwalentlerini döretmek üçin iň öňdebaryjy fotogrammetriýa, suny intellektli 3D rekonstruksiýa we çümüp barýan VR tehnologiýalaryny ulanýarys. Bu sanly ýazgylar geljek nesiller üçin ylmy arhiw hem-de bilim çeşmesi bolup hyzmat edýär.",
-      "p3": "Biziň işimiz arheologiýa, kompýuter ylmy we medeni mirasy gorap saklamak derslerini birleşdirýär: Hytaýyň suny intellekt we maşyn öwreniş ugrundaky tejribesini Türkmenistanyň ýerli meýdan iş tejribesi bilen utgaşdyrýar.",
+    "p3": "Biziň işimiz arheologiýa, kompýuter ylmy we medeni mirasy gorap saklamak derslerini birleşdirýär: Hytaýyň intellekt we maşyn öwreniş ugrundaky tejribesini Türkmenistanyň ýerli meýdan iş tejribesi bilen utgaşdyrýar.",
     "statActive": "Işjeň",
     "statSites": "Jurnal ýazylan ýerler",
     "statTeam": "Halkara topar",
@@ -241,7 +241,7 @@
     "formMessage": "Hat",
     "formMessagePlaceholder": "Gözleg gyzyklanmaňyzy ýa-da hyzmatdaşlyk teklibiňizi beýan ediň…",
     "formButton": "E-poçta bilen ibermek",
-    "formNote": "Alternatively, email us directly at amul.heritagetm@gmail.com. All inquiries acknowledged within 7 business days."
+    "formNote": "Şeýle hem, bize göni amul.heritagetm@gmail.com salgysyna ýazyň. Ähli soraglara 7 iş gününiň içinde jogap berleris."
   },
   "footer": {
     "brand": "Amul Mirasy Sanly Başlangyjy",
