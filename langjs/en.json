@@ -6,7 +6,11 @@
     "team": "Team",
     "publications": "Publications",
     "contact": "Contact",
-    "exploreProjects": "Explore Projects"
+    "exploreProjects": "Explore Projects",
+    "explore": "Explore",
+    "aboutUs": "📖 About Us",
+    "tools": "🛠️ Tools",
+    "constructor": "🏛️ 3D Constructor"
   },
   "hero": {
     "eyebrow": "Zarafshan-Karakum Corridor · UNESCO World Heritage",

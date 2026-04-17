@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="Apply for beta access to the 3D monument constructor. Upload photos and get 3D models of Silk Road heritage sites."/>
+<title>3D Constructor - Amul Heritage Digital Initiative</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark" aria-hidden="true">A</div>
+    AHDI
+  </a>
+  <div class="lang-switch">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('ru')">RU</button>
+    <button onclick="setLang('cn')">中文</button>
+    <button onclick="setLang('tm')">TKM</button>
+  </div>
+</nav>
+
+<!-- Secondary navigation for additional pages -->
+
+<!-- PAGE CONTENT -->
+<section class="page-header">
+  <div class="container">
+    <h1>🏛️ 3D Monument Constructor</h1>
+    <p class="lead">Turn photos into 3D models for research and preservation</p>
+  </div>
+</section>
+
+<section class="page-content">
+  <div class="container">
+    <div class="info-box">
+      <p>⚡ <strong>Beta testing coming soon!</strong> Leave your email to get early access.</p>
+    </div>
+
+    <form action="https://formsubmit.io/send/amul.heritagetm@gmail.com" method="POST" class="application-form">
+      <input type="hidden" name="_subject" value="3D Constructor Beta Request">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="form-group">
+        <label>Full Name *</label>
+        <input type="text" name="name" required placeholder="Dr. Jane Smith">
+      </div>
+
+      <div class="form-group">
+        <label>Email *</label>
+        <input type="email" name="email" required placeholder="researcher@university.edu">
+      </div>
+
+      <div class="form-group">
+        <label>Institutional Affiliation</label>
+        <input type="text" name="affiliation" placeholder="University / Museum / Institute">
+      </div>
+
+      <div class="form-group">
+        <label>Monument / Site Name</label>
+        <input type="text" name="monument" placeholder="e.g., Ancient Merv, Seyitjemaleddin">
+      </div>
+
+      <div class="form-group">
+        <label>Approximate number of photos</label>
+        <input type="number" name="photos" placeholder="100-5000">
+      </div>
+
+      <button type="submit" class="btn-primary">📩 Request Beta Access</button>
+    </form>
+
+    <p class="form-note">✉️ Or email us directly: <a href="mailto:amul.heritagetm@gmail.com">amul.heritagetm@gmail.com</a></p>
+  </div>
+</section>
+
+<!-- Gold divider -->
+<div class="geo-divider" aria-hidden="true"></div>
+
+<!-- CONTACT SECTION -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <p class="section-tag" data-i18n="contact.tag">Get in Touch</p>
+    <h2 class="section-title" id="contact-heading" data-i18n="contact.title">Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <p data-i18n="contact.description">
+          We welcome correspondence from heritage researchers, archaeologists, conservators, and
+          institutions with an interest in Central Asian heritage digitisation.
+        </p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">✉</div>
+            <div>
+              <div class="contact-item-label" data-i18n="contact.emailLabel">Email</div>
+              <div class="contact-item-value">
+                <a href="mailto:amul.heritagetm@gmail.com" data-i18n="contact.emailValue">amul.heritagetm@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="contact-item-label" data-i18n="contact.locationLabel">Locations</div>
+              <div class="contact-item-value" style="color:rgba(255,255,255,0.7)" data-i18n="contact.locationValue">
+                Ashgabat &amp; Turkmenabat, Turkmenistan<br/>
+                Shanghai, China
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-box reveal">
+        <h3 data-i18n="contact.formTitle">Send a Message</h3>
+        <p data-i18n="contact.formSubtitle">For research inquiries, collaboration proposals, or media requests.</p>
+        <div class="form-field">
+          <label for="cf-name" data-i18n="contact.formName">Full Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Dr. Jane Smith"/>
+        </div>
+        <div class="form-field">
+          <label for="cf-email" data-i18n="contact.formEmail">Email Address</label>
+          <input type="email" id="cf-email" name="email" placeholder="researcher@university.edu"/>
+        </div>
+        <div class="form-field">
+          <label for="cf-message" data-i18n="contact.formMessage">Message</label>
+          <textarea id="cf-message" name="message" placeholder="Please describe your research interest…"></textarea>
+        </div>
+        <a href="mailto:amul.heritagetm@gmail.com" class="btn-primary" style="display:inline-block;font-family:var(--font-body);font-size:0.72rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;padding:1em 2.4em;background:var(--gold);color:var(--navy-deep);border-radius:var(--radius);border:none;cursor:pointer;text-decoration:none;" data-i18n="contact.formButton">
+          Send via Email
+        </a>
+        <p class="form-note" data-i18n="contact.formNote">
+          Alternatively, email us directly at
+          <a href="mailto:amul.heritagetm@gmail.com">amul.heritagetm@gmail.com</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand" data-i18n="footer.brand">Amul Heritage Digital Initiative</div>
+    <div class="footer-tagline" data-i18n="footer.tagline">Digital Preservation of Silk Road Heritage · Zarafshan-Karakum Corridor</div>
+  </div>
+  <nav class="footer-links" aria-label="Footer navigation">
+    <a href="index.html">🏠 Home</a>
+    <a href="about.html" data-i18n="nav.about">About</a>
+    <a href="tools.html" data-i18n="nav.methodology">Tools</a>
+    <a href="3d-future.html" data-i18n="nav.projects">3D Constructor</a>
+    <a href="index.html#team" data-i18n="nav.team">Team</a>
+    <a href="index.html#publications" data-i18n="nav.publications">Publications</a>
+    <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="footer-copy" data-i18n="footer.copyright">© 2024 Amul Heritage Digital Initiative · amul.heritagetm@gmail.com</div>
+</footer>

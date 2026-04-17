@@ -6,7 +6,11 @@
     "team": "研究团队",
     "publications": "学术发表",
     "contact": "联系我们",
-    "exploreProjects": "探索项目"
+    "exploreProjects": "探索项目",
+    "explore": "探索",
+    "aboutUs": "📖 关于我们",
+    "tools": "🛠️ 工具",
+    "constructor": "🏛️ 3D 构造器"
   },
   "hero": {
     "eyebrow": "扎拉夫尚-卡拉库姆走廊 · 联合国教科文组织世界遗产",
