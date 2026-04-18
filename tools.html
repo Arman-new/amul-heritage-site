@@ -140,3 +140,36 @@
   </nav>
   <div class="footer-copy" data-i18n="footer.copyright">© 2024 Amul Heritage Digital Initiative · amul.heritagetm@gmail.com</div>
 </footer>
+<!-- FOOTER -->
+<footer>
+  ... footer content ...
+</footer>
+
+<!-- ═════ ADD JAVASCRIPT HERE ═════ -->
+<script>
+// Fix dropdown menu for mobile devices
+(function() {
+  function fixDropdown() {
+    if (window.innerWidth <= 860) {
+      const dropdowns = document.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const trigger = dropdown.querySelector('.dropdown-trigger');
+        if (trigger && !trigger.hasAttribute('data-mobile-fixed')) {
+          trigger.setAttribute('data-mobile-fixed', 'true');
+          trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdown.classList.toggle('active');
+          });
+        }
+      });
+    }
+  }
+  
+  fixDropdown();
+  window.addEventListener('resize', fixDropdown);
+})();
+</script>
+
+</body>
+</html>

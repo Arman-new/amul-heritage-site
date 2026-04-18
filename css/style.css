@@ -1227,3 +1227,58 @@ footer{
     pointer-events: auto;
   }
 }
+/* ═══════════════════════════════════════════════
+   FIX FOR DROPDOWN & NAVIGATION VISIBILITY
+═══════════════════════════════════════════════ */
+
+/* Fix z-index issues */
+#nav {
+  z-index: 2000 !important;
+}
+
+.dropdown-menu {
+  z-index: 2001 !important;
+  background: rgba(18, 37, 64, 0.98) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Hero elements - keep behind nav */
+.hero-sky,
+.hero-dunes,
+.hero-stars,
+.hero-arch-wrap {
+  z-index: 0 !important;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5 !important;
+}
+
+/* Fix Explore Projects button overlapping text */
+.nav-cta {
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  .nav-cta {
+    white-space: normal;
+    font-size: 0.6rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  /* Fix dropdown on mobile */
+  .dropdown-menu {
+    position: static;
+    background: rgba(255, 255, 255, 0.08);
+    border: none;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Ensure all links are clickable */
+  .dropdown-menu a {
+    padding: 0.6rem 1rem;
+    display: block;
+  }
+}
