@@ -940,3 +940,290 @@ footer{
         pointer-events: none;
     }
 }
+/* ═══════════════════════════════════════════════
+   MOBILE RESPONSIVE FIXES
+═══════════════════════════════════════════════ */
+
+/* Tablet and mobile navigation */
+@media (max-width: 860px) {
+  /* Fix navigation */
+  #nav {
+    padding: 0 1rem;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+  }
+
+  .nav-logo {
+    order: 1;
+  }
+
+  .lang-switch {
+    order: 2;
+    margin-left: auto;
+  }
+
+  .nav-cta {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.75rem;
+    padding: 0.6rem 1rem;
+  }
+
+  /* Fix dropdown menu for mobile */
+  .dropdown {
+    position: static;
+  }
+
+  .dropdown-trigger {
+    pointer-events: auto;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: none;
+    border: none;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    display: none;
+    width: 100%;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu a {
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+  }
+
+  /* Hero section */
+  #hero {
+    padding: 6rem 0 4rem;
+    min-height: auto;
+  }
+
+  .hero-content {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .hero-eyebrow {
+    justify-content: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .hero-arch-wrap {
+    display: none;
+  }
+
+  /* About section */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stat-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stat-box {
+    text-align: center;
+  }
+
+  /* Projects section */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Team section */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Partners */
+  .partners-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partner-item {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Contact section */
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-form-box {
+    padding: 1.5rem;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .footer-links {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  /* Additional pages */
+  .page-header {
+    padding: 100px 0 40px;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-page-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .tools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .application-form {
+    padding: 0 1rem;
+  }
+
+  /* Publications */
+  .pub-card {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
+  }
+
+  .pub-link {
+    align-self: center;
+  }
+
+  /* Methodology */
+  .method-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small phones (up to 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  h2.section-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem !important;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem !important;
+  }
+
+  .hero-desc {
+    font-size: 0.85rem;
+  }
+
+  .hero-btns .btn-primary,
+  .hero-btns .btn-outline {
+    padding: 0.8em 1.5em;
+    font-size: 0.6rem;
+  }
+
+  .hero-stat-num {
+    font-size: 1.5rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.55rem;
+  }
+
+  .lang-switch button {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+
+  .nav-logo {
+    font-size: 0.9rem;
+  }
+
+  .nav-logo-mark {
+    width: 26px;
+    height: 26px;
+    font-size: 0.65rem;
+  }
+
+  /* Team cards */
+  .team-card {
+    padding: 1.5rem;
+  }
+
+  .team-name {
+    font-size: 1.1rem;
+  }
+
+  /* Contact form */
+  .contact-form-box h3 {
+    font-size: 1.1rem;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  /* Footer */
+  .footer-brand {
+    font-size: 0.85rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.6rem;
+  }
+
+  .footer-links a {
+    font-size: 0.55rem;
+  }
+
+  .footer-copy {
+    font-size: 0.55rem;
+  }
+}
+
+/* Fix for dropdown on mobile - add this JavaScript helper */
+@media (max-width: 860px) {
+  .dropdown-trigger {
+    pointer-events: auto;
+  }
+}
