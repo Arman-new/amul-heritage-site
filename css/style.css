@@ -1271,3 +1271,9 @@ footer{
     display: none;
   }
 }
+/* Hide "Our Projects" button on mobile - cleaner menu */
+@media (max-width: 860px) {
+  .nav-cta {
+    display: none !important;
+  }
+}
