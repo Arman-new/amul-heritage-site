@@ -921,25 +921,7 @@ footer{
     color: var(--gold);
 }
 
-/* For mobile devices */
-@media (max-width: 860px) {
-    .dropdown-menu {
-        position: static;
-        background: transparent;
-        border: none;
-        padding-left: 1rem;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        display: none;
-    }
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-    .dropdown-trigger {
-        pointer-events: none;
-    }
-}
+
 /* ═══════════════════════════════════════════════
    MOBILE RESPONSIVE FIXES
 ═══════════════════════════════════════════════ */
@@ -1280,5 +1262,12 @@ footer{
   .dropdown-menu a {
     padding: 0.6rem 1rem;
     display: block;
+  }
+}
+/* Mobile only - hides "Projects" link, keeps "Explore" dropdown */
+@media (max-width: 860px) {
+  /* Hide the standalone Projects link on mobile only */
+  .nav-links > li:not(.dropdown) a[href="#projects"] {
+    display: none;
   }
 }

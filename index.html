@@ -35,7 +35,7 @@
         <ul class="dropdown-menu">
             <li><a href="about.html" data-i18n="nav.aboutUs">📖 About Us</a></li>
             <li><a href="tools.html" data-i18n="nav.tools">🛠️ Tools</a></li>
-            <li><a href="3d-future.html" datai18n="nav.constructor">🏛️ 3D Constructor</a></li>
+            <li><a href="3d-future.html" data-i18n="nav.constructor">🏛️ 3D Constructor</a></li>
         </ul>
     </li>
 </ul>
@@ -748,8 +748,10 @@
 /// Fix dropdown menu for mobile devices
 (function() {
   function fixDropdown() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
     if (window.innerWidth <= 860) {
-      const dropdowns = document.querySelectorAll('.dropdown');
+      // Mobile: Add click handlers for dropdowns
       dropdowns.forEach(dropdown => {
         const trigger = dropdown.querySelector('.dropdown-trigger');
         if (trigger && !trigger.hasAttribute('data-mobile-fixed')) {
@@ -761,10 +763,14 @@
           });
         }
       });
+    } else {
+      // Desktop: Remove active state when resizing to larger screens
+      dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
     }
   }
   
-  // Run on load and resize
   fixDropdown();
   window.addEventListener('resize', fixDropdown);
 })();
