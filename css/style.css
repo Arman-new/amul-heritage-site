@@ -1277,3 +1277,22 @@ footer{
     display: none !important;
   }
 }
+@media (max-width: 860px) {
+  /* Show only dropdown, hide other nav links */
+  .nav-links {
+    display: flex !important;
+    flex-wrap: wrap;
+    width: 100%;
+    order: 4;
+    margin-top: 10px;
+  }
+  
+  /* Hide all nav links except dropdown */
+  .nav-links > li:not(.dropdown) {
+    display: none;
+  }
+  
+  .dropdown-trigger {
+    display: block !important;
+  }
+}
