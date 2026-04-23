@@ -1,4 +1,4 @@
-﻿{
+{
   "nav": {
     "about": "Biz barada",
     "methodology": "Usullar",
@@ -24,7 +24,8 @@
       "years": "Gözleg ýyllary",
       "sites": "Jurnal ýazylan ýerler",
       "publications": "Syn gözden geçirilen işler",
-      "countries": "Ýurtlar"
+      "countries": "Ýurtlar",
+      "newText": "I am here"
     },
     "scroll": "Aşak aýla"
   },
@@ -73,17 +74,32 @@
     "photogrammetry": {
       "title": "Fotogrammetriýa",
       "desc": "Professional enjamlar we Polycam ýaly elýeterli mobil programmalar arkaly ýokary takyklykly 3D ýazga almak. Müňlerçe bir-biriniň üstüne düşýän suratlar «gurluş-hereketden» algoritmleri arkaly işlenip, millimetr takyklygyndaky dykyz nokat bulutlary we dokumaly torlar döredilýär. Meýdan jurnal ýazmagy ýerinde, ýadygärlige az päsgelçilik bilen geçirilýär.",
-      "tags": ["Gurluş-hereketden", "Dron bilen ölçeg", "Polycam", "LiDAR"]
+      "tags": {
+        "0": "Gurluş-hereketden",
+        "1": "Dron bilen ölçeg",
+        "2": "Polycam",
+        "3": "LiDAR"
+      }
     },
     "ai": {
       "title": "Suny intellektli rekonstruksiýa",
       "desc": "Maşyn öwreniş algoritmleri çig fotogrammetrik netijeleri optimallaşdyrýar we gowulaşdyrýar — dokumalary işlemegi awtomatlaşdyrýar, ýapyk ýerleri çözýär we geometrik takyklygy ýokarlandyrýar. Suny intellekt bilen edilen netijeler esasy fotogrammetrik ýazgylardan aç-açan tapawutlandyrylýar. Modeller iň ýokary işleşik üçin açyk GLTF/GLB formatlarynda eksport edilýär.",
-      "tags": ["Neýron radian meýdanlary", "Tor optimizasiýasy", "Dokuma sintezi", "GLTF/GLB"]
+      "tags": {
+        "0": "Neýron radian meýdanlary",
+        "1": "Tor optimizasiýasy",
+        "2": "Dokuma sintezi",
+        "3": "GLTF/GLB"
+      }
     },
     "immersive": {
       "title": "Çümüp barýan tejribe",
       "desc": "Tamamlanan 3D modeller VR/AR gurşawlarynda ýerleşdirilýär, bu bolsa bütindünýä gözlegçiler, mugallymlar we halk üçin wirtual ýer zyýaratlaryny mümkin edýär. Interaktiw gezelençler miras ýerlerini aralyk, konflikt ýa-da elýeterlilik çäkliligi sebäpli olardan aýrylan jemagatlar üçin giňişlik tejribesini gorap saklaýar.",
-      "tags": ["WebXR", "VR gezelenç", "AR örtügi", "Wirtual syýahatçylyk"]
+      "tags": {
+        "0": "WebXR",
+        "1": "VR gezelenç",
+        "2": "AR örtügi",
+        "3": "Wirtual syýahatçylyk"
+      }
     }
   },
   "projects": {
@@ -95,36 +111,36 @@
       "era": "Uniwersitet muzeýi · Türkmenabat",
       "name": "Arheologiýa we geologiýa muzeýi",
       "desc": "Magtymguly adyndaky Türkmen döwlet uniwersitetiniň muzeý kolleksiýalaryny sanly jurnal ýazmak — soňky ähli AHDI taslamalarynyň esasyny düzen esasy fotogrammetrik iş tertibini döretdi.",
-      "features": [
-        "Artefakt katalogynyň doly sanlylaşdyrylmagy",
-        "Arhiw gözlegleri üçin muzeý derejeli 3D modeller",
-        "Iş tertibini ösdürmek we tassyklamak",
-        "Geljek elýeterlilik üçin sanly gorap saklamak"
-      ]
+      "features": {
+        "0": "Artefakt katalogynyň doly sanlylaşdyrylmagy",
+        "1": "Arhiw gözlegleri üçin muzeý derejeli 3D modeller",
+        "2": "Iş tertibini ösdürmek we tassyklamak",
+        "3": "Geljek elýeterlilik üçin sanly gorap saklamak"
+      }
     },
     "card2": {
       "status": "✓ 2021-nji ýylda tamamlandy",
       "era": "Parfiýa döwri · Miladydan öňki III asyr · Ahal welaýaty",
       "name": "Gadymy Nisa galasy",
       "desc": "Parfiýa paýtagtynyň giňişleýin 3D jurnal ýazmagy — Merkezi Aziýanyň iň möhüm arheologik ýerlerinden biri. Bu taslama ESUNKO Bütindünýä mirasynyň çylşyrymly köp döwürli stratigrafiýasyny öz içine aldy.",
-      "features": [
-        "Çylşyrymly binagärligiň köp gatlakly jurnal ýazmagy",
-        "Dron kömegi bilen howa fotogrammetriýasy",
-        "Arheologik gözlegler üçin sanly gorap saklamak",
-        "Sowet döwründäki gazuw ýazgylary bilen çapraz salgylanma"
-      ]
+      "features": {
+        "0": "Çylşyrymly binagärligiň köp gatlakly jurnal ýazmagy",
+        "1": "Dron kömegi bilen howa fotogrammetriýasy",
+        "2": "Arheologik gözlegler üçin sanly gorap saklamak",
+        "3": "Sowet döwründäki gazuw ýazgylary bilen çapraz salgylanma"
+      }
     },
     "card3": {
       "status": "✓ 2024-nji ýylda tamamlandy",
       "era": "Timuriler döwri · XV asyr · Türkmenabat",
       "name": "Seýitjemaleddin kümmeti",
       "desc": "XV asyrda Timuriler döwrüniň binagärlik şaheseri, çylşyrymly syrlanan kafelçiligi bilen meşhur. AHDI, asyl kafel dokumalaryny submillimetr takyklygynda ýazga alýan ýokary düýpli 3D model döretdi.",
-      "features": [
-        "Submillimetr kafel dokuma çözgüdi",
-        "Doly VR gezelenç mümkinçiligi",
-        "Zeper ýeten bölekleriň suny intellekt bilen täzeden gurluşy",
-        "Reňk takyk sanly ekwiwalent (gorap saklamak üçin)"
-      ]
+      "features": {
+        "0": "Submillimetr kafel dokuma çözgüdi",
+        "1": "Doly VR gezelenç mümkinçiligi",
+        "2": "Zeper ýeten bölekleriň suny intellekt bilen täzeden gurluşy",
+        "3": "Reňk takyk sanly ekwiwalent (gorap saklamak üçin)"
+      }
     }
   },
   "team": {
@@ -170,7 +186,13 @@
       "author": "Awtor: Astanow Atael Ferruhowiç",
       "journal": "Žurnal: Vestnik Nauki i Tworçestwa (Ylym we döredijilik habarçysy)",
       "database": "Maglumat bazasy: CyberLeninka — Rus ylym sitirleme indeksi",
-      "tags": ["Fotogrammetriýa", "3D modelleme", "Arheologiýa", "Meýdan jurnal ýazmagy", "VR"],
+      "tags": {
+        "0": "Fotogrammetriýa",
+        "1": "3D modelleme",
+        "2": "Arheologiýa",
+        "3": "Meýdan jurnal ýazmagy",
+        "4": "VR"
+      },
       "linkText": "Okamak ↗"
     },
     "pub2": {
@@ -180,7 +202,12 @@
       "authors": "Awtorlar: AHDI Gözleg topary",
       "journal": "Žurnal: Innova Science — Ylmy işler ýygyndysy",
       "database": "Maglumat bazasy: CyberLeninka — Rus ylym sitirleme indeksi",
-      "tags": ["Ykjam fotogrammetriýa", "Polycam", "Arheologik jurnal ýazmagy", "Meýdan usullary"],
+      "tags": {
+        "0": "Ykjam fotogrammetriýa",
+        "1": "Polycam",
+        "2": "Arheologik jurnal ýazmagy",
+        "3": "Meýdan usullary"
+      },
       "linkText": "Okamak ↗"
     },
     "pub3": {
@@ -190,7 +217,11 @@
       "authors": "Awtorlar: AHDI Gözleg topary",
       "journal": "Ýygyndy: Innova Science ylmy işleri (11.04.2023)",
       "database": "Maglumat bazasy: eLibrary.ru — Rus ylmy sanly kitaphanasy",
-      "tags": ["Sanly arheologiýa", "Miras jurnal ýazmagy", "3D usullary"],
+      "tags": {
+        "0": "Sanly arheologiýa",
+        "1": "Miras jurnal ýazmagy",
+        "2": "3D usullary"
+      },
       "linkText": "Okamak ↗"
     },
     "pub4": {
@@ -201,7 +232,13 @@
       "conference": "Konferensiýa: XII Halkara ylmy konferensiýa «Ýewraziýa giňişliginde etnik medeniýetleriň sosial integrasiýasy we ösüşi»",
       "institution": "Gurama: Ałtay döwlet uniwersiteti, Barnaul, Rosiýa",
       "session": "Bölüm: Ýaşlar ylmy — Sanlylaşma şertlerinde etnik medeniýetleriň sosial integrasiýasy",
-      "tags": ["Suny intellekt we miras", "Fotogrammetriýa", "Sanly janlandyryş", "Halkara konferensiýa", "Ýewraziýa gözlegleri"],
+      "tags": {
+        "0": "Suny intellekt we miras",
+        "1": "Fotogrammetriýa",
+        "2": "Sanly janlandyryş",
+        "3": "Halkara konferensiýa",
+        "4": "Ýewraziýa gözlegleri"
+      },
       "linkText": "Maksatnama ↗"
     }
   },

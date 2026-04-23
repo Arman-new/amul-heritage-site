@@ -1,4 +1,4 @@
-﻿{
+{
   "nav": {
     "about": "About",
     "methodology": "Methods",
@@ -73,17 +73,32 @@
     "photogrammetry": {
       "title": "Photogrammetry",
       "desc": "High-precision 3D capture using both professional-grade equipment and accessible mobile applications such as Polycam. Thousands of overlapping photographs are processed through structure-from-motion algorithms to produce dense point clouds and textured meshes at millimetre accuracy. Field documentation is conducted in situ with minimal site disturbance.",
-      "tags": ["Structure-from-Motion", "Drone Survey", "Polycam", "LiDAR"]
+      "tags": [
+        "Structure-from-Motion",
+        "Drone Survey",
+        "Polycam",
+        "LiDAR"
+      ]
     },
     "ai": {
       "title": "AI Reconstruction",
       "desc": "Machine learning algorithms optimise and enhance raw photogrammetric outputs — automating texture processing, resolving occluded areas, and improving geometric fidelity. All AI-assisted outputs are clearly distinguished from primary photogrammetric records. Models are exported in open GLTF/GLB formats for maximum interoperability.",
-      "tags": ["Neural Radiance Fields", "Mesh Optimisation", "Texture Synthesis", "GLTF/GLB"]
+      "tags": [
+        "Neural Radiance Fields",
+        "Mesh Optimisation",
+        "Texture Synthesis",
+        "GLTF/GLB"
+      ]
     },
     "immersive": {
       "title": "Immersive Experience",
       "desc": "Completed 3D models are deployed in VR/AR environments, enabling virtual site visits for researchers, educators, and the public worldwide. Interactive walkthroughs preserve the spatial experience of heritage sites for communities separated from them by distance, conflict, or restricted access.",
-      "tags": ["WebXR", "VR Walkthrough", "AR Overlay", "Virtual Tourism"]
+      "tags": [
+        "WebXR",
+        "VR Walkthrough",
+        "AR Overlay",
+        "Virtual Tourism"
+      ]
     }
   },
   "projects": {
@@ -170,7 +185,13 @@
       "author": "Author: Astanov Atael Ferrukhovich",
       "journal": "Journal: Vestnik Nauki i Tvorchestva (Bulletin of Science and Creativity)",
       "database": "Database: CyberLeninka — Russian Science Citation Index",
-      "tags": ["Photogrammetry", "3D Modelling", "Archaeology", "Field Documentation", "VR"],
+      "tags": [
+        "Photogrammetry",
+        "3D Modelling",
+        "Archaeology",
+        "Field Documentation",
+        "VR"
+      ],
       "linkText": "Read ↗"
     },
     "pub2": {
@@ -180,7 +201,12 @@
       "authors": "Authors: AHDI Research Team",
       "journal": "Journal: Innova Science — Collection of Scientific Works",
       "database": "Database: CyberLeninka — Russian Science Citation Index",
-      "tags": ["Mobile Photogrammetry", "Polycam", "Archaeological Documentation", "Field Methods"],
+      "tags": [
+        "Mobile Photogrammetry",
+        "Polycam",
+        "Archaeological Documentation",
+        "Field Methods"
+      ],
       "linkText": "Read ↗"
     },
     "pub3": {
@@ -190,7 +216,11 @@
       "authors": "Authors: AHDI Research Team",
       "journal": "Collection: Innova Science Scientific Works (11.04.2023)",
       "database": "Database: eLibrary.ru — Russian Scientific Digital Library",
-      "tags": ["Digital Archaeology", "Heritage Documentation", "3D Methods"],
+      "tags": [
+        "Digital Archaeology",
+        "Heritage Documentation",
+        "3D Methods"
+      ],
       "linkText": "Read ↗"
     },
     "pub4": {
@@ -201,7 +231,13 @@
       "conference": "Conference: XII International Scientific Conference \"Social Integration and Development of Ethnocultures in the Eurasian Space\"",
       "institution": "Institution: Altai State University, Barnaul, Russia",
       "session": "Session: Youth Research — Social Integration of Ethnic Cultures in Digitalization Conditions",
-      "tags": ["AI Heritage", "Photogrammetry", "Digital Revival", "International Conference", "Eurasian Studies"],
+      "tags": [
+        "AI Heritage",
+        "Photogrammetry",
+        "Digital Revival",
+        "International Conference",
+        "Eurasian Studies"
+      ],
       "linkText": "Programme ↗"
     }
   },
