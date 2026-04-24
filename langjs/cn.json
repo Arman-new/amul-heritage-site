@@ -10,7 +10,8 @@
     "explore": "探索",
     "aboutUs": "📖 关于我们",
     "tools": "🛠️ 工具",
-    "constructor": "🏛️ 3D 构造器"
+    "constructor": "🏛️ 3D 构造器",
+    "NewME": "我叫亚鲁曼"
   },
   "hero": {
     "eyebrow": "扎拉夫尚-卡拉库姆走廊 · 联合国教科文组织世界遗产",
@@ -24,8 +25,7 @@
       "years": "研究年限",
       "sites": "记录遗址",
       "publications": "同行评审作品",
-      "countries": "合作国家",
-      "newText": "I am here"
+      "countries": "合作国家"
     },
     "scroll": "滚动"
   },

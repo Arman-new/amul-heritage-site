@@ -10,7 +10,8 @@
     "explore": "Synla",
     "aboutUs": "📖 Biz barada",
     "tools": "🛠️ Elementler",
-    "constructor": "🏛️ 3D Konstrukor"
+    "constructor": "🏛️ 3D Konstrukor",
+    "NewME": "meniň adym Arman"
   },
   "hero": {
     "eyebrow": "Zarafşan-Garagum koridory · UNESCO Bütindünýä mirasy",
@@ -24,8 +25,7 @@
       "years": "Gözleg ýyllary",
       "sites": "Jurnal ýazylan ýerler",
       "publications": "Syn gözden geçirilen işler",
-      "countries": "Ýurtlar",
-      "newText": "I am here"
+      "countries": "Ýurtlar"
     },
     "scroll": "Aşak aýla"
   },
