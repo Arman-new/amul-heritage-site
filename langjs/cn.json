@@ -10,15 +10,14 @@
     "explore": "探索",
     "aboutUs": "📖 关于我们",
     "tools": "🛠️ 工具",
-    "constructor": "🏛️ 3D 构造器",
-    "NewME": "我叫亚鲁曼"
+    "constructor": "🏛️ 3D 构造器"
   },
   "hero": {
     "eyebrow": "扎拉夫尚-卡拉库姆走廊 · 联合国教科文组织世界遗产",
     "titleLine1": "阿穆尔遗产",
     "titleLine2": "数字倡议",
     "subtitle": "通过数字技术保护伟大丝绸之路的遗产",
-    "description": "一个国际研究合作项目，结合摄影测量、人工智能驱动的重建和沉浸式VR/AR技术，为土库曼斯坦最重要的丝绸之路 monuments 创建高保真数字孪生——从尼萨的帕提亚城堡到赛义特杰马莱丁的蓝色瓷砖工艺。",
+    "description": "一个国际研究合作项目，结合摄影测量、人工智能驱动的重建和沉浸式VR/AR技术，为土库曼斯坦最重要的丝绸之遗迹创建高保真数字孪生——从尼萨的帕提亚城堡到赛义特杰马莱丁的蓝色瓷砖工艺。",
     "btnProjects": "探索我们的项目",
     "btnPublications": "查看出版物",
     "stats": {
@@ -154,7 +153,7 @@
       "affiliation": "华东理工大学 – 土库曼斯坦师范学院联合项目",
       "focusLabel": "研究重点",
       "focus": "田野摄影测量方法学、3D重建流程、丝绸之路建筑遗产文献记录。",
-      "background": "前土库曼斯坦科学部VR/AR专家。"
+      "background": "VR/AR专家。"
     },
     "member2": {
       "initials": "AA",
@@ -253,11 +252,6 @@
       "flag": "🇹🇲",
       "name": "以塞伊特纳扎尔·塞伊迪命名的土库曼国立师范学院",
       "country": "土库曼斯坦"
-    },
-    "partner3": {
-      "flag": "🇹🇲",
-      "name": "土库曼斯坦科学与教育部",
-      "country": "原属机构"
     }
   },
   "contact": {

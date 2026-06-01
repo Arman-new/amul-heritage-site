@@ -10,8 +10,7 @@
     "explore": "Explore",
     "aboutUs": "📖 About Us",
     "tools": "🛠️ Tools",
-    "constructor": "🏛️ 3D Constructor",
-    "NewME":"my name is Arman"
+    "constructor": "🏛️ 3D Constructor"
   },
   "hero": {
     "eyebrow": "Zarafshan-Karakum Corridor · UNESCO World Heritage",
@@ -154,7 +153,7 @@
       "affiliation": "East China University of Science and Technology – Turkmenistan Pedagogical Institute Joint Project",
       "focusLabel": "Research Focus",
       "focus": "Field photogrammetry methodology, 3D reconstruction pipelines, Silk Road architectural heritage documentation.",
-      "background": "Former VR/AR specialist, Ministry of Science of Turkmenistan."
+      "background": "Former VR/AR specialist."
     },
     "member2": {
       "initials": "AA",
@@ -246,18 +245,13 @@
     "title": "Collaborating Institutions",
     "partner1": {
       "flag": "🇨🇳",
-      "name": "East China University of science and Technology",
+      "name": "East China University of Science and Technology",
       "country": "Shanghai, China"
     },
     "partner2": {
       "flag": "🇹🇲",
       "name": "Turkmen State Pedagogical Institute named after Seyitnazar Seydi",
       "country": "Turkmenistan"
-    },
-    "partner3": {
-      "flag": "🇹🇲",
-      "name": "Ministry of Science and Education of Turkmenistan",
-      "country": "Original Institutional Affiliation"
     }
   },
   "contact": {
@@ -282,7 +276,7 @@
     "formMessage": "Message",
     "formMessagePlaceholder": "Please describe your research interest or collaboration proposal…",
     "formButton": "Send via Email",
-    "formNote": "Alternatively, email us directly at amul.heritagetm@gmail.com. All inquiries acknowledged within 7 business days."
+    "formNote": "Alternatively, email us directly at amul.heritagetm@gmail.com. All inquiries are acknowledged within 7 business days."
   },
   "footer": {
     "brand": "Amul Heritage Digital Initiative",

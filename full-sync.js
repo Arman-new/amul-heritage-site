@@ -1,4 +1,4 @@
-﻿// full-sync.js - Полная синхронизация с MyMemory API
+﻿// code provide adding and removing keys in langjs files with translation using MyMemory API (free, no key required)
 const fs = require('fs');
 const https = require('https');
 
@@ -10,7 +10,7 @@ const langMap = {
     'tm': 'tk'
 };
 
-// Функция для чтения JSON с удалением BOM
+// Function to read JSON file with BOM handling
 function readJSON(filePath) {
     try {
         const content = fs.readFileSync(filePath, 'utf8');
@@ -21,7 +21,7 @@ function readJSON(filePath) {
     }
 }
 
-// Функция для получения всех ключей из объекта
+// Function to get all keys in a nested object with dot notation
 function getAllKeys(obj, prefix = '') {
     let keys = [];
     for (const [key, value] of Object.entries(obj)) {
@@ -34,7 +34,7 @@ function getAllKeys(obj, prefix = '') {
     return keys;
 }
 
-// Функция для удаления ключа из объекта
+// Function to delete a key from an object
 function deleteKey(obj, keyPath) {
     const parts = keyPath.split('.');
     const lastKey = parts.pop();
@@ -52,7 +52,7 @@ function deleteKey(obj, keyPath) {
     return false;
 }
 
-// Функция для очистки пустых объектов
+// Function to clean empty objects
 function cleanEmptyObjects(obj) {
     for (const [key, value] of Object.entries(obj)) {
         if (typeof value === 'object' && value !== null) {
@@ -64,7 +64,7 @@ function cleanEmptyObjects(obj) {
     }
 }
 
-// Функция перевода с помощью MyMemory API (Бесплатно, без ключа)
+// Function to translate text using MyMemory API (Free, no key required)
 async function translateText(text, targetLang) {
     return new Promise((resolve) => {
         const toLang = langMap[targetLang];
@@ -78,7 +78,7 @@ async function translateText(text, targetLang) {
                     const parsed = JSON.parse(data);
                     const translated = parsed.responseData.translatedText;
                     
-                    // MyMemory возвращает текст с "@@@####" если нет перевода, убираем
+                    // MyMemory returns text with "@@@####" if no translation is available, remove it
                     const cleanTranslated = translated.replace(/@@@[^|]*\|/g, '');
                     resolve(cleanTranslated);
                 } catch(e) {
@@ -87,13 +87,13 @@ async function translateText(text, targetLang) {
                 }
             });
         }).on('error', () => {
-            console.log(`   ⚠️ Ошибка сети, оставляем оригинал`);
+            console.log(`  Error fetching translation, leaving original text`);
             resolve(text);
         });
     });
 }
 
-// Функция для добавления и перевода новых ключей
+// Function to merge enObj into targetObj, translating new keys
 async function mergeAndTranslate(enObj, targetObj, targetLang, path = '') {
     const result = { ...targetObj };
     
@@ -112,63 +112,63 @@ async function mergeAndTranslate(enObj, targetObj, targetLang, path = '') {
     return result;
 }
 
-// Главная функция
+// Main function
 async function fullSync() {
-    console.log('\n🔍 ПОЛНАЯ СИНХРОНИЗАЦИЯ С MyMemory');
+    console.log('\n🔍 FULL SYNC WITH MyMemory');
     console.log('═'.repeat(50));
     
-    // Читаем en.json
+    // Read en.json
     const enData = readJSON('langjs/en.json');
     if (!enData) {
-        console.log('❌ Ошибка: не могу прочитать langjs/en.json');
-        console.log('   Проверьте, что файл существует и имеет правильный формат JSON');
+        console.log('❌ Error: cannot read langjs/en.json');
+        console.log('   Please check that the file exists and has the correct JSON format');
         return;
     }
     
     const enKeys = getAllKeys(enData);
-    console.log(`\n📄 en.json: ${enKeys.length} ключей\n`);
+    console.log(`\n📄 en.json: ${enKeys.length} keys\n`);
     
     for (const lang of languages) {
-        console.log(`\n📝 Обработка ${lang.toUpperCase()}.json...`);
+        console.log(`\n📝 Processing ${lang.toUpperCase()}.json...`);
         console.log('─'.repeat(30));
         
         const filePath = `langjs/${lang}.json`;
         let langData = readJSON(filePath);
         
         if (!langData) {
-            console.log(`   ⚠️ Файл не найден, создаю новый`);
+            console.log(`   ⚠️ File not found, creating new one`);
             langData = {};
         }
         
         const langKeys = getAllKeys(langData);
         
-        // 1. Удаляем лишние ключи
+        // 1.Delete keys that are not in en.json
         const keysToDelete = langKeys.filter(key => !enKeys.includes(key));
         
         if (keysToDelete.length > 0) {
-            console.log(`   🗑️ Удаляю ${keysToDelete.length} лишних ключей...`);
+            console.log(`   🗑️ Deleting ${keysToDelete.length} unnecessary keys...`);
             for (const key of keysToDelete) {
                 deleteKey(langData, key);
                 console.log(`      - ${key}`);
             }
             cleanEmptyObjects(langData);
         } else {
-            console.log(`   ✅ Нет лишних ключей`);
+            console.log(`   ✅ No unnecessary keys`);
         }
         
-        // 2. Добавляем новые ключи с переводом
+        // 2. Add new keys with translation
         const merged = await mergeAndTranslate(enData, langData, lang);
         
-        // 3. Сохраняем файл
+        // 3. Save the file
         fs.writeFileSync(filePath, JSON.stringify(merged, null, 2));
-        console.log(`   💾 Сохранено: langjs/${lang}.json`);
+        console.log(`   💾 Saved: langjs/${lang}.json`);
     }
     
     console.log('\n' + '═'.repeat(50));
-    console.log('🎉 ПОЛНАЯ СИНХРОНИЗАЦИЯ ЗАВЕРШЕНА!');
-    console.log('   • Лишние ключи удалены');
-    console.log('   • Новые ключи добавлены с переводом (MyMemory)');
+    console.log('🎉 FULL SYNC COMPLETED!');
+    console.log('   • Unnecessary keys removed');
+    console.log('   • New keys added with translation (MyMemory)');
 }
 
-// Запускаем
+// Run the full sync
 fullSync().catch(console.error);

@@ -10,8 +10,7 @@
     "explore": "Synla",
     "aboutUs": "📖 Biz barada",
     "tools": "🛠️ Elementler",
-    "constructor": "🏛️ 3D Konstrukor",
-    "NewME": "meniň adym Arman"
+    "constructor": "🏛️ 3D Konstrukor"
   },
   "hero": {
     "eyebrow": "Zarafşan-Garagum koridory · UNESCO Bütindünýä mirasy",
@@ -32,7 +31,7 @@
   "about": {
     "tag": "Başlangyç barada",
     "title": "Howp astyndaky mirasy jurnal ýazmak",
-    "p1": "Amul Mirasy Sanly Başlangyjy (AHDI) Zarafşan-Garagum koridorynyň — gadymy Ýüpek ýolunyň Türkmenistan böleginiň (Merg–Amul ugry) ESUNKO Bütindünýä mirasyny jurnal ýazmak we sanly gorap saklamak üçin döredilen halkara gözleg hyzmatdaşlygydyr.",
+    "p1": "Amul Mirasy Sanly Başlangyjy (AHDI) Zarafşan-Garagum koridorynyň — gadymy Ýüpek ýolunyň Türkmenistan böleginiň (Merw–Amul ugry) UNESCO Bütindünýä mirasyny jurnal ýazmak we sanly gorap saklamak üçin döredilen halkara gözleg hyzmatdaşlygydyr.",
     "p2": "Biz howp astyndaky arheologik ýadygärlikleriň ýokary takyk sanly ekwiwalentlerini döretmek üçin iň öňdebaryjy fotogrammetriýa, suny intellektli 3D rekonstruksiýa we çümüp barýan VR tehnologiýalaryny ulanýarys. Bu sanly ýazgylar geljek nesiller üçin ylmy arhiw hem-de bilim çeşmesi bolup hyzmat edýär.",
     "p3": "Biziň işimiz arheologiýa, kompýuter ylmy we medeni mirasy gorap saklamak derslerini birleşdirýär: Hytaýyň intellekt we maşyn öwreniş ugrundaky tejribesini Türkmenistanyň ýerli meýdan iş tejribesi bilen utgaşdyrýar.",
     "statActive": "Işjeň",
@@ -62,8 +61,8 @@
       },
       "entry5": {
         "year": "2025–26",
-        "event": "Merg arheologik toplumy",
-        "detail": "Merg oazisiniň jurnal ýazylmagy meýilleşdirilýär; giňeldilen suny intellektli rekonstruksiýa iş tertibi."
+        "event": "Merw arheologik toplumy",
+        "detail": "Merw oazisiniň jurnal ýazylmagy meýilleşdirilýär; giňeldilen suny intellektli rekonstruksiýa iş tertibi."
       }
     }
   },
@@ -151,16 +150,16 @@
       "initials": "AA",
       "name": "Astanow Atael",
       "role": "Taslama ýolbaşçysy · Sanly miras hünärmeni",
-      "affiliation": "Gündogar Hytaý Normal Uniwersiteti – Türkmenistan Pedagogika Institutynyň bilelikdäki taslamasy",
+      "affiliation": "Gündogar Hytaý Ylym we Tehnologiýa Uniwersiteti – Türkmenistan Pedagogika Institutynyň bilelikdäki taslamasy",
       "focusLabel": "Gözleg ugry",
       "focus": "Meýdan fotogrammetriýa usulyýeti, 3D rekonstruksiýa iş tertipleri, Ýüpek ýolunyň binagärlik mirasyny jurnal ýazmak.",
-      "background": "Öňki VR/AR hünärmeni, Türkmenistanyň Ylym ministrligi."
+      "background": "Öňki VR/AR hünärmeni."
     },
     "member2": {
       "initials": "AA",
       "name": "Astanowa Arman",
       "role": "Suny intellekt / ML hünärmeni",
-      "affiliation": "Gündogar Hytaý Normal Uniwersiteti, Şanhaý",
+      "affiliation": "Gündogar Hytaý Ylym we Tehnologiýa Uniwersiteti, Şanhaý",
       "focusLabel": "Gözleg ugry",
       "focus": "3D miras modellerini suny intellekt bilen optimallaşdyrmak, awtomatlaşdyrylan dokuma işlemek, fotogrammetriýany gowulaşdyrmak üçin maşyn öwrenişi.",
       "background": "Suny intellekt we maşyn öwrenişi ugry boýunça magistr kandidaty."
@@ -246,31 +245,26 @@
     "title": "Hyzmatdaş edaralar",
     "partner1": {
       "flag": "🇨🇳",
-      "name": "Gündogar Hytaý Normal Uniwersiteti",
+      "name": "Gündogar Hytaý Ylym we Tehnologiýa Uniwersiteti",
       "country": "Şanhaý, Hytaý"
     },
     "partner2": {
       "flag": "🇹🇲",
       "name": "Seýitnazar Seýdi adyndaky Türkmen döwlet pedagogika instituty",
       "country": "Türkmenistan"
-    },
-    "partner3": {
-      "flag": "🇹🇲",
-      "name": "Türkmenistanyň Ylym we bilim ministrligi",
-      "country": "Başlangyç edara degişliligi"
     }
   },
   "contact": {
     "tag": "Habarlaşmak",
     "title": "Habarlaşmak üçin",
-    "description": "Merkezi Aziýa mirasyny sanlylaşdyrmak bilen gyzyklanýan miras gözlegçilerinden, arheologlardan, restawratorlardan we edaralardan hat alyşmaga hoş geldiň diýýäris. Esasanam Merg arheologik toplumy we Zarafşan-Garagum koridorynyň beýleki ýerleri bilen baglanyşykly hyzmatdaşlyk mümkinçilikleri bilen gyzyklanýarys.",
+    "description": "Merkezi Aziýa mirasyny sanlylaşdyrmak bilen gyzyklanýan miras gözlegçilerinden, arheologlardan, restawratorlardan we edaralardan hat alyşmaga hoş geldiň diýýäris. Esasanam Merw arheologik toplumy we Zarafşan-Garagum koridorynyň beýleki ýerleri bilen baglanyşykly hyzmatdaşlyk mümkinçilikleri bilen gyzyklanýarys.",
     "emailLabel": "E-poçta",
     "emailValue": "amul.heritagetm@gmail.com",
     "locationLabel": "Ýerleşýän ýerleri",
     "locationValue": "Aşgabat we Türkmenabat, Türkmenistan\nŞanhaý, Hytaý",
     "profilesLabel": "Akademik profiller",
     "focusLabel": "Geografik üns merkezi",
-    "focusValue": "Zarafşan-Garagum koridory\nESUNKO Bütindünýä mirasy · Merg–Amul ugry",
+    "focusValue": "Zarafşan-Garagum koridory\nESUNKO Bütindünýä mirasy · Merw–Amul ugry",
     "formTitle": "Hat ibermek",
     "formSubtitle": "Gözleg soraglary, hyzmatdaşlyk teklipleri ýa-da metbugat haýyşlary üçin.",
     "formName": "Doly ady",
