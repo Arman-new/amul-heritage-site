@@ -81,7 +81,7 @@
       }
     },
     "ai": {
-      "title": "Suny intellektli rekonstruksiýa",
+      "title": "Sanly intellekt boýunça rekonstruksiýa",
       "desc": "Maşyn öwreniş algoritmleri çig fotogrammetrik netijeleri optimallaşdyrýar we gowulaşdyrýar — dokumalary işlemegi awtomatlaşdyrýar, ýapyk ýerleri çözýär we geometrik takyklygy ýokarlandyrýar. Suny intellekt bilen edilen netijeler esasy fotogrammetrik ýazgylardan aç-açan tapawutlandyrylýar. Modeller iň ýokary işleşik üçin açyk GLTF/GLB formatlarynda eksport edilýär.",
       "tags": {
         "0": "Neýron radian meýdanlary",
