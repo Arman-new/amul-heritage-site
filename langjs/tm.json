@@ -9,8 +9,9 @@
     "exploreProjects": "Taslamalary synla",
     "explore": "Synla",
     "aboutUs": "📖 Biz barada",
-    "tools": "🛠️ Elementler",
-    "constructor": "🏛️ 3D Konstrukor"
+    "tools": "AI Çat-bot",
+    "constructor": "🏛️ 3D Konstrukor",
+    "home": "Esasy Sahypa"
   },
   "hero": {
     "eyebrow": "Zarafşan-Garagum koridory · UNESCO Bütindünýä mirasy",
@@ -282,5 +283,28 @@
     "brand": "Amul Mirasy Sanly Başlangyjy",
     "tagline": "Ýüpek ýoly mirasyny sanly gorap saklamak · Zarafşan-Garagum koridory",
     "copyright": "© 2024 Amul Mirasy Sanly Başlangyjy · amul.heritagetm@gmail.com"
+  },
+  "chat": {
+    "title": "🤖 AI-çatbot",
+    "subtitle": "Beýik ýoly barada gözleg hyzmatdaşlyk mümkinçilikleri, 3D täzeden gurluşyk we medeniýet mirasy barada soraglar berip bilersiňiz",
+    "welcomeTitle": "AI çatbot kömekçisine hoş geldiniz",
+    "welcomeText": "Menden gadymy Nisa, Merv, Seyitjemaleddin, fotogrammetriýa ýa-da beta giriş üçin nädip arza barada soraň.",
+    "inputPlaceholder": "Soragyňyzy şu ýere ýazyň...",
+    "sendButton": "Ibermek",
+    "suggestions": {
+      "nisa": "Gadymy Nisa barada gürrüň beriň",
+      "merv": "Merýem barada gürrüň beriň",
+      "seyitjemaleddin": "Seyitjemalleddin näme?",
+      "photogrammetry": "Fotogrammetriya nädip işleýär?",
+      "apply": "Beta girişini soramak üçin nädip arza çekmeli?"
+    },
+    "chatAnswers": {
+      "nisa": "Gadymy Nisa Parfiýa imperiýasynyň (B. e. öň 3 - nji asyrda) paýtagty boldy. Bu UNESCO-nyň Dünýä Mirasy ýeridir. Ol Hellenistik we Orta Aziýa däp-dessurlaryny birleýär. Bu ýerde gala diwarlary we merasim jaýlary bar.",
+      "merv": "Merv 2500 ýyldan gowrak Silk ýolunda iň uly şäherlerden biri boldy. Arheologik kompleksde Erk Kala (6 asyr b. e. öň), Gyaur Kala (Hellenistik) we Sultan Kala (Islam däp-dessurlary) bar.",
+      "seyitjemaleddin": "Türkmenabatdaky Seyitjemaleddin mazary 15 - nji asyrda çylşyrymly türkçe we geometrik nusgalary üçin tanalýan timurid ussasydyr. Bu Orta Aziýanyň iň beýik islam gurluşygyny aňladýar.",
+      "photogrammetry": "Fotogrammetriýa 3D nusgalary bir-birinden tapawutlanýan suratlardan döredýär. Biz 200-500 sany suratlary dürli köşelerden alýarys, soňra olary analiz edip, 3D-de dogry bulutlary we milimetr dogry ýüpleri döredýäris.",
+      "apply": "Beta girişini soramak üçin 3D Konstruktor sahypamyza (3d-future.html) baryň. Siz Silk Road mirasy bilen bagly aragatnaşyk gyzyklanmagyň we ýer ýüzündäki suratlaryň ýygnanyşmagynyň gerekdigini görersiňiz (50+ maslahat berilýär). Biz 5-7 iş gününde jogap berýäris.",
+      "default": "Bu soraga jogap berendigiňiz üçin minnetdar! Bizde barlag, şeriklik mümkinçilikleri ýa-da texniki nusgalar barada köpräk bilmek üçin, bize amul.heritagetm@gmail.com adresine habar beriň"
+    }
   }
 }

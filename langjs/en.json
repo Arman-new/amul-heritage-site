@@ -9,8 +9,9 @@
     "exploreProjects": "Explore Projects",
     "explore": "Explore",
     "aboutUs": "📖 About Us",
-    "tools": "🛠️ Tools",
-    "constructor": "🏛️ 3D Constructor"
+    "tools": "AI chatbot",
+    "constructor": "🏛️ 3D Constructor",
+    "home": "🏠 Home"
   },
   "hero": {
     "eyebrow": "Zarafshan-Karakum Corridor · UNESCO World Heritage",
@@ -282,5 +283,28 @@
     "brand": "Amul Heritage Digital Initiative",
     "tagline": "Digital Preservation of Silk Road Heritage · Zarafshan-Karakum Corridor",
     "copyright": "© 2024 Amul Heritage Digital Initiative · amul.heritagetm@gmail.com"
+  },
+  "chat":{
+  "title": "🤖 AI Heritage Assistant",
+  "subtitle": "Ask questions about Silk Road monuments, 3D reconstruction, and cultural heritage",
+  "welcomeTitle":"Welcome to the AI Heritage Assistant",
+  "welcomeText":"Ask me about Ancient Nisa, Merv, Seyitjemaleddin, photogrammetry, or how to apply for beta access.",
+  "inputPlaceholder":"Type your question here...(Press Enter to send)",
+  "sendButton":"Send",
+  "suggestions":{
+    "nisa":"Tell me about Ancient Nisa",
+    "merv":"Tell me about Merv",
+    "seyitjemaleddin":"What is Seyitjemalleddin?",
+    "photogrammetry":"How does photogrammetry work?",
+    "apply":"How to apply for beta access?"
+  },
+  "chatAnswers": {
+    "nisa": "Ancient Nisa was the capital of the Parthian Empire (3rd century BCE). It's a UNESCO World Heritage site with unique architecture blending Hellenistic and Central Asian styles. The site includes impressive fortress walls and ceremonial buildings.",
+    "merv": "Merv was one of the largest cities on the Silk Road for over 2,500 years. The archaeological complex includes Erk Kala (6th century BCE), Gyaur Kala (Hellenistic), and Sultan Kala (Islamic period) with the impressive Sultan Sanjar Mausoleum.",
+    "seyitjemaleddin": "The Seyitjemaleddin Mausoleum in Turkmenabat is a 15th-century Timurid masterpiece known for intricate turquoise tilework and geometric patterns. It represents peak Central Asian Islamic architecture.",
+    "photogrammetry": "Photogrammetry creates 3D models from overlapping photos. We take 200-500 images from different angles, then software analyzes them to create accurate 3D point clouds and textured meshes with millimeter accuracy.",
+    "apply": "Visit our 3D Constructor page (3d-future.html) to request beta access. You'll need research interest in Silk Road heritage and a collection of site photos (50+ recommended). We respond within 5-7 business days.",
+    "default": "Thank you for your question! For more details about our research, partnership opportunities, or technical specifications, please email us at amul.heritagetm@gmail.com"
   }
+ }
 }

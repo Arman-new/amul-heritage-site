@@ -9,8 +9,9 @@
     "exploreProjects": "探索项目",
     "explore": "探索",
     "aboutUs": "📖 关于我们",
-    "tools": "🛠️ 工具",
-    "constructor": "🏛️ 3D 构造器"
+    "tools": "AI 智能客服",
+    "constructor": "🏛️ 3D 构造器",
+    "home": "主页"
   },
   "hero": {
     "eyebrow": "扎拉夫尚-卡拉库姆走廊 · 联合国教科文组织世界遗产",
@@ -282,5 +283,28 @@
     "brand": "阿穆尔遗产数字倡议",
     "tagline": "丝绸之路遗产数字保护 · 扎拉夫尚-卡拉库姆走廊",
     "copyright": "© 2024 阿穆尔遗产数字倡议 · amul.heritagetm@gmail.com"
+  },
+  "chat": {
+    "title": "🤖 人工智能遗产助理",
+    "subtitle": "询问有关丝绸之路古迹、3D重建和文化遗产的问题",
+    "welcomeTitle": "欢迎使用人工智能遗产助手",
+    "welcomeText": "询问有关古代Nisa、Merv、Seyitjemaleddin、摄影测量或如何申请测试版访问权限的信息。",
+    "inputPlaceholder": "在此处输入您的问题... （按Enter发送）",
+    "sendButton": "发送",
+    "suggestions": {
+      "nisa": "跟我说说古代尼萨",
+      "merv": "对我说一说……",
+      "seyitjemaleddin": "什么是Seyitjemalleddin ？",
+      "photogrammetry": "摄影测量的工作原理是什么？",
+      "apply": "如何申请测试版访问权限？"
+    },
+    "chatAnswers": {
+      "nisa": "古代尼萨是帕提亚帝国（公元前3世纪）的首都。它是联合国教科文组织的世界遗产，拥有融合希腊和中亚风格的独特建筑。该遗址包括令人印象深刻的堡垒墙和礼仪建筑。",
+      "merv": "2500多年来，梅尔夫一直是丝绸之路上最大的城市之一。考古综合体包括Erk Kala （公元前6世纪）、Gyaur Kala （希腊化）和Sultan Kala （伊斯兰时期） ，以及令人印象深刻的Sultan Sanjar陵墓。",
+      "seyitjemaleddin": "土库曼纳巴特的Seyitjemaleddin陵墓是一座15世纪的帖木儿杰作，以错综复杂的绿松石瓷砖和几何图案而闻名。它代表了中亚伊斯兰建筑的顶峰。",
+      "photogrammetry": "摄影测量从重叠的照片创建3D模型。我们从不同角度拍摄200-500张图像，然后通过软件分析它们，以毫米级精度创建精确的3D点云和纹理网格。",
+      "apply": "请访问我们的3D构造器页面(3d-future.html)申请测试版访问权限。您需要对丝绸之路遗产的研究兴趣和一系列现场照片（推荐50多张）。我们会在5-7个工作日内回复。",
+      "default": "感谢您的提问！有关我们的研究、合作机会或技术规范的更多详细信息，请发送电子邮件至amul.heritagetm@gmail.com"
+    }
   }
 }

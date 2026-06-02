@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="About Amul Heritage Digital Initiative — research collaboration for digital preservation of Silk Road heritage in Turkmenistan."/>
+<title>🤖 AI Heritage Assistant</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- ════════════════════════ NAV ════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Amul Heritage Digital Initiative home">
+    <div class="nav-logo-mark" aria-hidden="true">A</div>
+    AHDI
+  </a>
+<ul class="nav-links" role="list">
+  <li><a href="index.html" data-i18n="nav.home">🏠 Home</a></li>
+  <li><a href="about.html" data-i18n="nav.aboutUs">📖 About Us</a></li>
+  <li><a href="3d-future.html" data-i18n="nav.constructor">🏛️ 3D Constructor</a></li>  
+</ul>
+  
+  <div class="lang-switch">
+  <button onclick="setLang('en')">EN</button>
+  <button onclick="setLang('ru')">RU</button>
+  <button onclick="setLang('cn')">中文</button>
+  <button onclick="setLang('tm')">TKM</button>
+</div>
+</nav>
+
+<!-- ========== MAIN CHAT SECTION ========== -->
+<main>
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1 data-i18n="chat.title">🤖 AI Heritage Assistant</h1>
+    <p data-i18n="chat.subtitle">Ask questions about Silk Road monuments, 3D reconstruction, and cultural heritage</p>
+  </div>
+
+  <!-- Chat Container -->
+  <div class="chat-container">
+    <!-- Messages Area -->
+    <div class="chat-messages">
+      <!-- Welcome Message -->
+      <div class="welcome-message">
+        <div class="welcome-icon">🏛️</div>
+        <h3 data-i18n="chat.welcomeTitle">Welcome to Heritage AI Assistant</h3>
+        <p data-i18n="chat.welcomeText">Ask me about Ancient Nisa, Merv, Seyitjemaleddin, photogrammetry, or how to apply for beta access.</p>
+        <div class="suggested-questions">
+          <button data-i18n="chat.suggestions.nisa">🏛️ Tell me about Ancient Nisa</button>
+          <button data-i18n="chat.suggestions.merv">🏰 Tell me about Merv</button>
+          <button data-i18n="chat.suggestions.seyitjemaleddin">🕌 What is Seyitjemaleddin?</button>
+          <button data-i18n="chat.suggestions.photogrammetry">📸 How does photogrammetry work?</button>
+          <button data-i18n="chat.suggestions.apply">📝 How to apply for beta access?</button>
+        </div>
+      </div>
+
+      <!-- Example User Message -->
+      <div class="message user">
+        <div class="message-content">
+          <div class="message-text" data-i18n="chat.suggestions.nisa">Tell me about Ancient Nisa</div>
+          <div class="message-time">14:30</div>
+        </div>
+      </div>
+
+      <!-- Example Bot Response -->
+      <div class="message bot">
+        <div class="message-content">
+          <div class="message-text" data-i18n="chat.chatAnswers.nisa">Ancient Nisa was the capital of the Parthian Empire (3rd century BCE). It's a UNESCO World Heritage site with unique architecture blending Hellenistic and Central Asian styles.</div>
+          <div class="message-time">14:30</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Input Area -->
+    <div class="chat-input">
+      <textarea placeholder="Type your question here... (Press Enter to send)" data-i18n="chat.inputPlaceholder"></textarea>
+      <button data-i18n="chat.sendButton">📤 Send</button>
+    </div>
+  </div>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-brand" data-i18n="footer.brand">Amul Heritage Digital Initiative</div>
+  <div class="footer-tagline" data-i18n="footer.tagline">Digital Preservation of Silk Road Heritage · Zarafshan-Karakum Corridor</div>
+  <div class="footer-copy" data-i18n="footer.copyright">© 2024 Amul Heritage Digital Initiative · amul.heritagetm@gmail.com</div>
+</footer>
+<!-- ════════════════════════ SCRIPTS ════════════════════════ -->
+<script>
+/* ── Starfield ── */
+(function(){
+  const c = document.getElementById('stars-container');
+  if(!c) return;
+  for(let i=0;i<120;i++){
+    const s = document.createElement('div');
+    s.className = 'star';
+    const size = Math.random()*2+0.5;
+    s.style.cssText = `
+      left:${Math.random()*100}%;
+      top:${Math.random()*85}%;
+      width:${size}px;height:${size}px;
+      animation-delay:${Math.random()*4}s;
+      animation-duration:${2+Math.random()*3}s;
+    `;
+    c.appendChild(s);
+  }
+})();
+
+/* ── Scroll reveal ── */
+(function(){
+  const els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    const obs = new IntersectionObserver(entries=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    },{threshold:0.1});
+    els.forEach(el=>obs.observe(el));
+  } else {
+    els.forEach(el=>el.classList.add('visible'));
+  }
+})();
+
+/* ── Nav shrink on scroll ── */
+(function(){
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll',()=>{
+    nav.style.background = window.scrollY > 60
+      ? 'rgba(10,24,40,0.98)'
+      : 'rgba(18,37,64,0.96)';
+  },{passive:true});
+})();
+/// Fix dropdown menu for mobile devices
+(function() {
+  function fixDropdown() {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    if (window.innerWidth <= 860) {
+      // Mobile: Add click handlers for dropdowns
+      dropdowns.forEach(dropdown => {
+        const trigger = dropdown.querySelector('.dropdown-trigger');
+        if (trigger && !trigger.hasAttribute('data-mobile-fixed')) {
+          trigger.setAttribute('data-mobile-fixed', 'true');
+          trigger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            dropdown.classList.toggle('active');
+          });
+        }
+      });
+    } else {
+      // Desktop: Remove active state when resizing to larger screens
+      dropdowns.forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    }
+  }
+  
+  fixDropdown();
+  window.addEventListener('resize', fixDropdown);
+})();
+</script>
+<script src="js/lang.js"></script>
+
+</body>
+</html>
